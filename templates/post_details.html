@@ -1,5 +1,14 @@
-<img src=" {{ post.hero_image.url }}">
+{% extends 'base.html' %}
+{% block content %}
+
+<!-- Detials that appear in the post once clicked on -->
+
+<img width="600px" height="400px" src=" {{ post.hero_image.url }}">
 <h1>{{ post.title}}</h1>
 <small>Submitted by: {{ post.author }}</small>
 <hr>
 {{ post.body }}
+
+<a href="{% url 'home' %}" class="btn btn-primary">Back</a>
+
+{% endblock %}
