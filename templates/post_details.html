@@ -1,4 +1,6 @@
 {% extends 'base.html' %}
+{% block title %}{{ post.title_tag}}{% endblock %}
+
 {% block content %}
 
 <!-- Detials that appear in the post once clicked on -->
@@ -8,6 +10,8 @@
 <small>Submitted by: {{ post.author }}</small>
 <hr>
 {{ post.body }}
+<br>
+<br>
 
 <a href="{% url 'home' %}" class="btn btn-primary">Back</a>
 

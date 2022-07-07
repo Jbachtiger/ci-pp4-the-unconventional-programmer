@@ -12,3 +12,10 @@ class Home(generic.ListView):
 class PostDetail(generic.DetailView):
     model = Post
     template_name = 'post_details.html'
+
+
+class CreatePost(generic.CreateView):
+    model = Post
+    template_name = 'create_post.html'
+    fields = ('title', 'author', 'title_tag', 'hero_image', 'body', 'topic')
+
