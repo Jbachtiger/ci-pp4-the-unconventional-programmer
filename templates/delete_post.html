@@ -11,6 +11,7 @@
         {% csrf_token %}
         <strong>Are you sure you want to delete {{ post.title }}? This can't be undone once deleted.</strong>
         <button class="btn btn-danger">Delete</button>
+        <a href="{% url 'post-detail' post.slug %}" class="btn btn-primary">Back</a>
     </form>
 </div>
 
