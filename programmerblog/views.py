@@ -23,5 +23,11 @@ class CreatePost(generic.CreateView):
 
 class EditPost(generic.UpdateView):
     model = Post
-    template_name = 'edit_post.html'
     form_class = EditForm
+    template_name = 'edit_post.html'
+    
+
+
+class DeletePost(generic.DeleteView):
+    model = Post
+    template_name = 'delete_post.html'
