@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.urls import reverse
+from django.template.defaultfilters import slugify
 from cloudinary.models import CloudinaryField
 
 # Post model to display post details when a post is created
@@ -23,7 +24,12 @@ class Post(models.Model):
         return self.title + ' | ' + str(self.author)
     
     def get_absolute_url(self):
-        return reverse('post-detail', args=(str(self.id)))
+        return reverse("post-detail", kwargs={"slug": self.slug})
+
+    def save(self, *args, **kwargs):  
+        if not self.slug:
+            self.slug = slugify(self.title)
+        return super().save(*args, **kwargs)
 
     
     def number_of_likes(self):
