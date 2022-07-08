@@ -8,6 +8,7 @@
 <!-- <img width="600px" height="400px" src=" {{ post.hero_image.url }}"> -->
 <h1>{{ post.title}}</h1>
 <small>Submitted by: {{ post.author }}</small>
+<a href="{% url 'edit-post' post.slug %}" class="btn btn-primary">Edit</a>
 <hr>
 {{ post.body }}
 <br>
