@@ -9,6 +9,7 @@
 <h1>{{ post.title}}</h1>
 <small>Submitted by: {{ post.author }}</small>
 <a href="{% url 'edit-post' post.slug %}" class="btn btn-primary">Edit</a>
+<a href="{% url 'delete-post' post.slug %}" class="btn btn-primary">Delete</a>
 <hr>
 {{ post.body }}
 <br>
