@@ -23,9 +23,11 @@ class Post(models.Model):
     def __str__(self):
         return self.title + ' | ' + str(self.author)
     
+# Redirects to post-detail page on post creation
     def get_absolute_url(self):
         return reverse("post-detail", kwargs={"slug": self.slug})
 
+# A method to save url slug in database
     def save(self, *args, **kwargs):  
         if not self.slug:
             self.slug = slugify(self.title)
