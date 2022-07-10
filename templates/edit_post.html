@@ -4,6 +4,8 @@
 {% block content %}
 
 {% if user.is_authenticated %}
+<!-- Using an if statement to determine whether the user id matches post author id to enable editing of post -->
+{% if user.id == post.author.id  %}
 <h1>Edit Post:</h1>
 
 <div class="form-group">
@@ -14,6 +16,9 @@
 
     </form>
 </div>
+{% else %}
+<h3>Access Denied. You do not have permission to view this page!</h3>
+{% endif %}
 {% else %}
 <h3>Access Denied. You do not have permission to view this page!</h3>
 {% endif %}

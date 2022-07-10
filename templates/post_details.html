@@ -10,8 +10,11 @@
 <small>Submitted by: {{ post.author }}</small>
 
 {% if user.is_authenticated %}
+<!-- Using an if statement to determine whether the user id matches post author id to enable editing of post -->
+{% if user.id == post.author.id  %}
 <a href="{% url 'edit-post' post.slug %}" class="btn btn-primary">Edit</a>
 <a href="{% url 'delete-post' post.slug %}" class="btn btn-primary">Delete</a>
+{% endif %}
 {% endif %}
 <hr>
 {{ post.body }}
