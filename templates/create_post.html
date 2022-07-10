@@ -14,6 +14,14 @@
 
     </form>
 </div>
+
+<!-- JS code populates the author field automatically with the correct signed in author id to ensure only an author who owns each blog post can create/edit it -->
+<!-- Script snippet amended from Codemy tutorial -->
+<script>
+    const author = "{{ user.id }}";
+    document.getElementById("author_field").value = author
+</script>
+
 {% else %}
 <h3>Access Denied. You do not have permission to view this page!</h3>
 {% endif %}
