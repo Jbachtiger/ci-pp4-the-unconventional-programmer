@@ -3,6 +3,7 @@
 
 {% block content %}
 
+{% if user.is_authenticated %}
 <h1>Create Post:</h1>
 
 <div class="form-group">
@@ -13,7 +14,9 @@
 
     </form>
 </div>
-
+{% else %}
+<h3>Access Denied. You do not have permission to view this page!</h3>
+{% endif %}
 
 
 {% endblock %}

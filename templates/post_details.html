@@ -8,8 +8,11 @@
 <!-- <img width="600px" height="400px" src=" {{ post.hero_image.url }}"> -->
 <h1>{{ post.title}}</h1>
 <small>Submitted by: {{ post.author }}</small>
+
+{% if user.is_authenticated %}
 <a href="{% url 'edit-post' post.slug %}" class="btn btn-primary">Edit</a>
 <a href="{% url 'delete-post' post.slug %}" class="btn btn-primary">Delete</a>
+{% endif %}
 <hr>
 {{ post.body }}
 <br>

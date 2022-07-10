@@ -3,6 +3,7 @@
 
 {% block content %}
 
+{% if user.is_authenticated %}
 <h1>Delete Post:</h1>
 <h4>You are about to delete: {{ post.title }}</h4>
 
@@ -14,7 +15,9 @@
         <a href="{% url 'post-detail' post.slug %}" class="btn btn-primary">Back</a>
     </form>
 </div>
-
+{% else %}
+<h3>Access Denied. You do not have permission to view this page!</h3>
+{% endif %}
 
 
 {% endblock %}
