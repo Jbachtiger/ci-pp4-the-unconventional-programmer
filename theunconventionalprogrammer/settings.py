@@ -153,8 +153,8 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CKEDITOR_CONFIGS = {
-'default': {
-    'width': 'auto',
+    'default': {
+        'width': 'auto',
 
           },
     }
