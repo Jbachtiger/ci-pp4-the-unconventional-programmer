@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from django.urls import reverse
 from django.template.defaultfilters import slugify
 from cloudinary.models import CloudinaryField
+from ckeditor.fields import RichTextField
 
 # Post model to display post details when a post is created
 
@@ -14,7 +15,7 @@ class Post(models.Model):
     hero_image = CloudinaryField('image', default='placeholder')
     publish_date = models.DateTimeField(auto_now_add=True)
     likes = models.ManyToManyField(User, related_name='blog_likes', blank=True)
-    body = models.TextField()
+    body = RichTextField(blank=True, null=True)
     topic = models.CharField(max_length=255)
 
     class Meta:
