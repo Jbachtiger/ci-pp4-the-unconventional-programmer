@@ -21,6 +21,41 @@
 <br>
 <br>
 
-<a href="{% url 'home' %}" class="btn btn-primary">Back</a>
+<!--Comments-->
+<div class="section ">
+    <div class="container ">
+        <h2>Comments({{post_comments_count}})</h2>
+        <div class="row ">
+            <div class="col-lg-8 mx-auto ">
+                <!--Display comments, username and date-->
+                <div class="media-list">
+                    {% for comment in post_comments %}
+                    <div>
+                        <div class="media-body">
+                            <div class="small-1">
+                                <strong> {{comment.user}} -</strong>
+                                <strong><time class="ml-4 opaciy-70 small-3"> {{comment.publish_date}}</time></strong>
+                            </div>
+                            <p> {{comment.body}}</p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                <!--Display form and authenticate to ensure only logged in users can comment-->
+                {% if user.is_authenticated %}
+                <form method="POST" action="{% url 'post-detail' slug=post.slug %}">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        {{form}}
+                    </div>
+                    <button class="btn btn-primary btn-block " type="submit">Comment</button>
+                </form>
+                {% else %}
+                <h4><a href="{% url 'account_signup' %}">Signup</a> or <a href="{% url 'account_login' %}">Login</a> to create a comment.</h4>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
 
 {% endblock %}

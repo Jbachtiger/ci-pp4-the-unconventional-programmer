@@ -33,7 +33,7 @@ class EditForm(forms.ModelForm):
 class CommentForm(forms.ModelForm):
     body = forms.CharField(widget=forms.Textarea(attrs={
         'class': 'md-textarea form-control',
-        'placeholder': ‘Type your comment here.',
+        'placeholder': 'Type your comment here.',
         'rows': '4',
     }))
     class Meta:
