@@ -1,5 +1,5 @@
 from django import forms
-from .models import Post
+from .models import Post, Comment
 
 # Django form that is used to create posts
 class PostForm(forms.ModelForm):
@@ -28,3 +28,14 @@ class EditForm(forms.ModelForm):
             'topic': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'e.g. Coding, Imposter Syndrome, Jobs'})
         }
 
+
+# Comment form
+class CommentForm(forms.ModelForm):
+    body = forms.CharField(widget=forms.Textarea(attrs={
+        'class': 'md-textarea form-control',
+        'placeholder': ‘Type your comment here.',
+        'rows': '4',
+    }))
+    class Meta:
+        model = Comment
+        fields = ('body', )
