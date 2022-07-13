@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Post
+from .models import Post, Comment
 
 #Admin page functionality for posts
 
@@ -9,3 +9,5 @@ class PostAdmin(admin.ModelAdmin):
     list_filter = ('publish_date', 'author')
     prepopulated_fields = {'slug': ('title',)}
     search_fields = ['title', 'body', 'topic']
+
+admin.site.register(Comment)
