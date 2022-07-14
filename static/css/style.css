@@ -13,7 +13,7 @@ body {
     background-color: #fff6f9;
 }
 
-/* Sign-up page */
+/* Account pages e.g. signup, login, logout */
 .account-page-layout {
     display: flex;
     align-items: center;
@@ -29,7 +29,7 @@ body {
 }
 
 /* Button styles */
-.signup-btn {
+.generic-btn {
     background-color: #ed5e93;
 }
 
