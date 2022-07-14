@@ -1,0 +1,43 @@
+/* Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed:wght@300&display=swap');
+
+* {
+    /* box-sizing: border-box;
+    padding: 0;
+    margin: 0; */
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+}
+
+body {
+    background-color: #fff6f9;
+}
+
+/* Sign-up page */
+.account-page-layout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.link {
+    color: blue;
+}
+
+.link:hover {
+    color: #000;
+}
+
+/* Button styles */
+.signup-btn {
+    background-color: #ed5e93;
+}
+
+/* Forms */
+.generic-form-style {
+    background-color: #d3fbd8;
+    border-radius: 20px;
+    width: fit-content;
+    padding: 20px;
+
+}
