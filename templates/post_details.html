@@ -6,20 +6,30 @@
 <!-- Detials that appear in the post once clicked on -->
 
 <!-- <img width="600px" height="400px" src=" {{ post.hero_image.url }}"> -->
-<h1>{{ post.title}}</h1>
-<small>Submitted by: {{ post.author }}</small>
+<div class="container mt-4">
+    <div class="row">
+        <div class="col">
+            <h1>{{ post.title}}</h1>
+            <small>Submitted by: {{ post.author }}</small>
+        </div>
+    </div>
 
-{% if user.is_authenticated %}
-<!-- Using an if statement to determine whether the user id matches post author id to enable editing of post -->
-{% if user.id == post.author.id  %}
-<a href="{% url 'edit-post' post.slug %}" class="btn btn-primary">Edit</a>
-<a href="{% url 'delete-post' post.slug %}" class="btn btn-primary">Delete</a>
-{% endif %}
-{% endif %}
+    {% if user.is_authenticated %}
+    <!-- Using an if statement to determine whether the user id matches post author id to enable editing of post -->
+    {% if user.id == post.author.id  %}
+    <div class="row mt-4">
+        <div class="col">
+            <a href="{% url 'edit-post' post.slug %}" class="btn generic-btn">Edit</a>
+            <a href="{% url 'delete-post' post.slug %}" class="btn generic-btn">Delete</a>
+        </div>
+    </div>
+    {% endif %}
+    {% endif %}
+    <hr>
+    {{ post.body|safe }}
+</div>
+
 <hr>
-{{ post.body|safe }}
-<br>
-<br>
 
 <!--Comments-->
 <div class="section ">
@@ -31,7 +41,7 @@
                 <div class="media-list">
                     {% for comment in post_comments %}
                     <div>
-                        <div class="media-body">
+                        <div class="media-body mt-2">
                             <div class="small-1">
                                 <strong> {{comment.user}} -</strong>
                                 <strong><time class="ml-4 opaciy-70 small-3"> {{comment.publish_date}}</time></strong>
@@ -43,12 +53,12 @@
                 </div>
                 <!--Display form and authenticate to ensure only logged in users can comment-->
                 {% if user.is_authenticated %}
-                <form method="POST" action="{% url 'post-detail' slug=post.slug %}">
+                <form class="mt-4" method="POST" action="{% url 'post-detail' slug=post.slug %}">
                     {% csrf_token %}
                     <div class="form-group">
                         {{form}}
                     </div>
-                    <button class="btn btn-primary btn-block " type="submit">Comment</button>
+                    <button class="btn generic-btn btn-block mt-4 " type="submit">Comment</button>
                 </form>
                 {% else %}
                 <h4><a href="{% url 'account_signup' %}">Signup</a> or <a href="{% url 'account_login' %}">Login</a> to create a comment.</h4>

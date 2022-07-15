@@ -67,6 +67,7 @@ body {
 /* Button styles */
 .generic-btn {
     background-color: #ed5e93;
+    color: white;
 }
 
 /* Forms */
