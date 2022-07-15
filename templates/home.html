@@ -2,11 +2,15 @@
 {% block content %}
 
 
-<br>
-
 <!-- Generates a list of all posts which get displayed on the homepage -->
 {% for post in object_list %}
-<p><a href="{% url 'post-detail' post.slug %}"> {{ post.title }}</a> - {{ post.author }} - {{ post.topic }} - {{ post.publish_date }}</p>
+<div class="container home-blog-list">
+    <div class="row">
+        <div class="col-12">
+            <p><a href="{% url 'post-detail' post.slug %}"> {{ post.title }}</a> - {{ post.author }} - {{ post.topic }} - {{ post.publish_date }}</p>
+        </div>
+    </div>
+</div>
 {% endfor %}
 
 

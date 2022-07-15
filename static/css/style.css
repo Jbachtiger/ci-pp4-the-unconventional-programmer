@@ -13,6 +13,15 @@ body {
     background-color: #fff6f9;
 }
 
+/* Generic */
+.home-blog-list {
+    background-color: #d3fbd8;
+    margin-top: 30px;
+    padding: 50px;
+    border-radius: 20px;
+    width: 60%;
+}
+
 /* Account pages e.g. signup, login, logout */
 .account-page-layout {
     display: flex;
