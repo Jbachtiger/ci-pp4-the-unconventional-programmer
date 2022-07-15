@@ -4,20 +4,36 @@
 {% block content %}
 
 {% if user.is_authenticated %}
-<h1>Delete Post:</h1>
-<h4>You are about to delete: {{ post.title }}</h4>
-
-<div class="form-group">
-    <form method="POST">
-        {% csrf_token %}
-        <strong>Are you sure you want to delete {{ post.title }}? This can't be undone once deleted.</strong>
-        <button class="btn btn-danger">Delete</button>
-        <a href="{% url 'post-detail' post.slug %}" class="btn btn-primary">Back</a>
-    </form>
+<div class="containter delete-background">
+    <div class="row delete-container">
+        <div class="col-md-8 mt-3 offset-md-2">
+            <h2 class="mt-4">Delete Post:</h2>
+            <h4 class="mt-4">You are about to delete: {{ post.title }}</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8 mt-3 offset-md-2">
+            <div class="form-group">
+                <form method="POST">
+                    {% csrf_token %}
+                    <p><strong>Are you sure you want to delete {{ post.title }}? This can't be undone once deleted.</strong></p>
+                    <div class="row">
+                        <div class="col-md-8 mt-3 offset-md-2">
+                            <button class="btn btn-danger">Delete</button>
+                            <a href="{% url 'post-detail' post.slug %}" class="btn btn-primary">Back</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    {% else %}
+    <div class="mt-4 delete-container">
+        <h3>Access Denied. You do not have permission to view this page!</h3>
+    </div>
 </div>
-{% else %}
-<h3>Access Denied. You do not have permission to view this page!</h3>
 {% endif %}
+
 
 
 {% endblock %}

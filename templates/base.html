@@ -49,11 +49,13 @@
     </nav>
 
     <!-- Main content of page -->
-    <main>
-        {% block content %}
-        <!-- This is where each of the other pages insert into the base template -->
-        {% endblock %}
-    </main>
+    <div class="container">
+        <main>
+            {% block content %}
+            <!-- This is where each of the other pages insert into the base template -->
+            {% endblock %}
+        </main>
+    </div>
 
     <!-- Footer -->
     <footer class="footer mt-4 py-3 footer-background">
