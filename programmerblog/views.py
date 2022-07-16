@@ -30,10 +30,15 @@ class PostDetail(generic.DetailView):
             }))
 
     def get_context_data(self, **kwargs):
+        liked = False
+        post = get_object_or_404(Post, slug=self.object.slug)
+        if post.likes.filter(id=self.request.user.id).exists():
+            liked = True
         post_comments_count = Comment.objects.all().filter(post=self.object.id).count()
         post_comments = Comment.objects.all().filter(post=self.object.id)
         context = super().get_context_data(**kwargs)
         context.update({
+            'liked': liked,
             'form': self.form,
             'post_comments': post_comments,
             'post_comments_count': post_comments_count,

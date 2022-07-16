@@ -67,7 +67,7 @@
         </div>
     </div>
 </div>
-
+<hr>
 <!-- Likes -->
 <!-- Code amended from I Think Therefore I blog Code Institute walkthrough -->
 <div class="container">
@@ -79,11 +79,11 @@
                 {% csrf_token %}
                 {% if liked %}
 
-                <button class="btn generic-btn" type="submit" name="blogpost_id" value="{{post.slug}}">Like</button>
+                <button class="btn btn-danger" type="submit" name="blogpost_id" value="{{post.slug}}">Unlike</button>
 
                 {% else %}
 
-                <button class="btn generic-btn" type="submit" name="blogpost_id" value="{{post.slug}}"></i>Like</button>
+                <button class="btn btn-success" type="submit" name="blogpost_id" value="{{post.slug}}"></i>Like</button>
 
                 {% endif %}
 
