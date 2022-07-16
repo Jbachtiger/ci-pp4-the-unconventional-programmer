@@ -1,6 +1,7 @@
-from django.shortcuts import render, redirect, reverse
-from django.views import generic
-from django.urls import reverse_lazy 
+from django.shortcuts import redirect, reverse, get_object_or_404
+from django.views import generic, View
+from django.urls import reverse_lazy
+from django.http import HttpResponseRedirect
 from .models import Post, Comment
 from .forms import PostForm, EditForm, CommentForm
 
@@ -39,6 +40,18 @@ class PostDetail(generic.DetailView):
         })
 
         return context
+
+
+class PostLike(View):
+    
+    def post(self, request, slug, *args, **kwargs):
+        post = get_object_or_404(Post, slug=slug)
+        if post.likes.filter(id=request.user.id).exists():
+            post.likes.remove(request.user)
+        else:
+            post.likes.add(request.user)
+
+        return HttpResponseRedirect(reverse('post-detail', args=[slug]))
 
 
 class CreatePost(generic.CreateView):
