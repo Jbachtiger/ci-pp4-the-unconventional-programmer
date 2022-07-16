@@ -68,4 +68,31 @@
     </div>
 </div>
 
+<!-- Likes -->
+<!-- Code amended from I Think Therefore I blog Code Institute walkthrough -->
+<div class="container">
+    <h3>Likes: {{ post.number_of_likes }}</h3>
+    <div class="row">
+        <div class="col-1">
+            {% if user.is_authenticated %}
+            <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
+                {% csrf_token %}
+                {% if liked %}
+
+                <button class="btn generic-btn" type="submit" name="blogpost_id" value="{{post.slug}}">Like</button>
+
+                {% else %}
+
+                <button class="btn generic-btn" type="submit" name="blogpost_id" value="{{post.slug}}"></i>Like</button>
+
+                {% endif %}
+
+            </form>
+            {% else %}
+            <button class="btn generic-btn">Like</button>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
 {% endblock %}

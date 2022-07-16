@@ -6,7 +6,7 @@
 {% if user.is_authenticated %}
 <!-- Using an if statement to determine whether the user id matches post author id to enable editing of post -->
 {% if user.id == post.author.id  %}
-<h1>Edit Post:</h1>
+<h1 class="mt-4">Edit Post:</h1>
 
 <div class="form-group">
     <form method="POST">
