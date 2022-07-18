@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'cloudinary',
     'ckeditor',
     'programmerblog',
+    'profiles',
 ]
 
 SITE_ID = 1
