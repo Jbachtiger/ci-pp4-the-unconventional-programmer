@@ -1,3 +1,4 @@
+''' Views for Profile Page '''
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
@@ -6,6 +7,12 @@ from .forms import UpdateUserForm, UpdateProfileForm
 
 @login_required
 def profile(request):
+    '''
+    Import the required forms and create instances of those forms
+       depending on whether the request is get or post. This will be 
+       returned to the template and pre-populate with user details,
+       if both forms are valid then save.
+    '''
     if request.method == 'POST':
         user_form = UpdateUserForm(request.POST, instance=request.user)
         profile_form = UpdateProfileForm(request.POST, request.FILES, instance=request.user.profile)
@@ -19,9 +26,5 @@ def profile(request):
         user_form = UpdateUserForm(instance=request.user)
         profile_form = UpdateProfileForm(instance=request.user.profile)
 
-    context = {
-        'user_form': user_form,
-        'profile_form': profile_form
-    }
-
+    
     return render(request, 'profile.html', {'user_form': user_form, 'profile_form': profile_form})

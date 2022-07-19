@@ -1,6 +1,8 @@
+''' Imports for urls '''
 from django.urls import path
 from .views import Home, PostDetail, CreatePost, EditPost, DeletePost, PostLike
 
+# Url Patterns for pages within The Unconventional Programmer site
 urlpatterns = [
     path('', Home.as_view(), name="home"),
     path('post/<slug:slug>', PostDetail.as_view(), name='post-detail'),

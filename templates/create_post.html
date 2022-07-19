@@ -5,7 +5,7 @@
 
 {% if user.is_authenticated %}
 <h1 class="mt-4">Create Post:</h1>
-
+<!-- Create post form, user can submit form if logged in -->
 <div class="form-group">
     <form method="POST">
         {% csrf_token %}
@@ -23,6 +23,7 @@
     document.getElementById("author_field").value = author
 </script>
 
+<!-- If user is not logged in the following message will show up when landing on the create post page -->
 {% else %}
 <h3>Access Denied. You do not have permission to view this page!</h3>
 {% endif %}

@@ -1,3 +1,4 @@
+''' Imports for post and comment models '''
 from django.db import models
 from django.contrib.auth.models import User
 from django.urls import reverse
@@ -8,6 +9,7 @@ from ckeditor.fields import RichTextField
 # Post model to display post details when a post is created
 
 class Post(models.Model):
+    ''' Model for Posts '''
     title = models.CharField(max_length=255, unique=True)
     title_tag = models.CharField(max_length=255)
     slug = models.SlugField(max_length=255, unique=True)
@@ -19,27 +21,29 @@ class Post(models.Model):
     topic = models.CharField(max_length=255)
 
     class Meta:
+        ''' To order created posts by descending order '''
         ordering = ['-publish_date']
 
     def __str__(self):
         return self.title + ' | ' + str(self.author)
-    
-# Redirects to post-detail page on post creation
+     
     def get_absolute_url(self):
+        ''' Redirects to post-detail page on post creation '''
         return reverse("post-detail", kwargs={"slug": self.slug})
 
-# A method to save url slug in database
-    def save(self, *args, **kwargs):  
+    def save(self, *args, **kwargs):
+        ''' A method to save url slug in database '''  
         if not self.slug:
             self.slug = slugify(self.title)
         return super().save(*args, **kwargs)
 
-    
     def number_of_likes(self):
+        ''' Helper method to return total number of likes on a post '''
         return self.likes.count()
 
 
 class Comment (models.Model):
+    ''' Model for Comment '''
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     publish_date = models.DateTimeField(auto_now_add=True)
     post = models.ForeignKey('Post', on_delete=models.CASCADE)

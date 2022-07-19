@@ -3,14 +3,22 @@
 <html lang="en">
 
 <head>
+    <!-- Meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A site for junior developers and aspiring tech workers to get resources for unconventional ways into the industry">
+    <meta name="keywords" content="the unconventional programmer, tech, junior developers, career changers">
+
     <title>
         {% block title %}
         The Unconventional Programmer
         {% endblock %}
     </title>
+
+    <!-- Bootstrap link -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <!-- My CSS link -->
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
 </head>
 
