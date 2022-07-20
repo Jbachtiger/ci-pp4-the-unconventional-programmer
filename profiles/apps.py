@@ -6,6 +6,6 @@ class ProfilesConfig(AppConfig):
     name = 'profiles'
 
 
-def ready(self):
-    ''' Import the Profile Signals '''
-    import profiles.signals
+# def ready(self):
+#     ''' Import the Profile Signals '''
+#     import profiles.signals
