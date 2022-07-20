@@ -19,6 +19,8 @@ class Post(models.Model):
     likes = models.ManyToManyField(User, related_name='blog_likes', blank=True)
     body = RichTextField(blank=True, null=True)
     topic = models.CharField(max_length=255)
+    summary = models.CharField(max_length=255, default='summary')
+
 
     class Meta:
         ''' To order created posts by descending order '''
@@ -44,7 +46,7 @@ class Post(models.Model):
 
 class Comment (models.Model):
     ''' Model for Comment '''
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, blank=True, null=True)
     publish_date = models.DateTimeField(auto_now_add=True)
     post = models.ForeignKey('Post', on_delete=models.CASCADE)
     body = models.TextField()

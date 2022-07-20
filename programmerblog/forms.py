@@ -8,14 +8,15 @@ class PostForm(forms.ModelForm):
     class Meta:
         '''Get post model and choose which fields to display ''' 
         model = Post
-        fields = ('title', 'author', 'title_tag', 'body', 'topic')
+        fields = ('title', 'title_tag', 'summary', 'author', 'body', 'topic', )
 
         widgets = {
             'title': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Title'}),
             'author': forms.TextInput(attrs={'class': 'form-control', 'value': '', 'id': 'author_field', 'type': 'hidden'}),
             'title_tag': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Title of post for SEO purposes'}),
             'body': forms.Textarea(attrs={'class': 'form-control', 'placeholder': 'Get creative and write your content here'}),
-            'topic': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'e.g. Coding, Imposter Syndrome, Jobs'})
+            'topic': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'e.g. Coding, Imposter Syndrome, Jobs'}),
+            'summary': forms.Textarea(attrs={'class': 'form-control', 'placeholder': 'Brief overview of your post'})
         }
 
 
@@ -24,13 +25,14 @@ class EditForm(forms.ModelForm):
     class Meta:
         ''' Get edit form model and choose which fields to display '''
         model = Post
-        fields = ('title', 'title_tag', 'body', 'topic')
+        fields = ('title', 'title_tag', 'summary', 'body', 'topic', )
 
         widgets = {
             'title': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Title'}),
             'title_tag': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Title of post for SEO purposes'}),
             'body': forms.Textarea(attrs={'class': 'form-control', 'placeholder': 'Get creative and write your content here'}),
-            'topic': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'e.g. Coding, Imposter Syndrome, Jobs'})
+            'topic': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'e.g. Coding, Imposter Syndrome, Jobs'}),
+            'summary': forms.Textarea(attrs={'class': 'form-control', 'placeholder': 'Brief overview of your post'})
         }
 
 
