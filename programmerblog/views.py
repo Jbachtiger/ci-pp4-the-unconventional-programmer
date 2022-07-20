@@ -11,7 +11,7 @@ class Home(generic.ListView):
     ''' Class to show all posts in a list view on homepage '''
     model = Post
     template_name = 'home.html'
-    paginate_by = 20
+    paginate_by = 5
 
 
 class PostDetail(generic.DetailView):

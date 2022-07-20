@@ -13,5 +13,21 @@
 </div>
 {% endfor %}
 
+<!-- Followed I Think Therefore I blog walkthrough and amended to suit my project needs-->
+{% if is_paginated %}
+<nav aria-label="Page navigation">
+    <ul class="pagination justify-content-center">
+        {% if page_obj.has_previous %}
+        <li><a href="?page={{ page_obj.previous_page_number }}" class="btn generic-btn mt-3">&laquo; PREV </a></li>
+        {% endif %}
+        {% if page_obj.has_next %}
+        <li><a href="?page={{ page_obj.next_page_number }}" class="btn generic-btn mt-3"> NEXT &raquo;</a></li>
+
+        {% endif %}
+    </ul>
+</nav>
+
+{% endif %}
+
 
 {% endblock %}
