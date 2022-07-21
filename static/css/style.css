@@ -77,6 +77,13 @@ body {
     width: 200px;
 }
 
+/* Create post page */
+.create-form {
+    background-color: #d3fbd8;
+    border-radius: 20px;
+    padding: 0 25px 20px;
+}
+
 /* Button styles */
 .generic-btn {
     background-color: #ed5e93;
