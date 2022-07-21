@@ -1,4 +1,4 @@
-''' Imports ''' 
+''' Imports '''
 from django.shortcuts import redirect, reverse, get_object_or_404
 from django.views import generic, View
 from django.urls import reverse_lazy
@@ -11,7 +11,7 @@ class Home(generic.ListView):
     ''' Class to show all posts in a list view on homepage '''
     model = Post
     template_name = 'home.html'
-    paginate_by = 5
+    paginate_by = 3
 
 
 class PostDetail(generic.DetailView):

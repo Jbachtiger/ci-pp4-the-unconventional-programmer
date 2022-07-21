@@ -8,10 +8,11 @@
     <div class="row">
         <div class="col-12">
             <h4><a href="{% url 'post-detail' post.slug %}"> {{ post.title }}</a></h4>
-            <p>Posted by: {{ post.author }}</p>
-            <p>Publish date: {{ post.publish_date }}</p>
-            <p>Topic: {{ post.topic }} </p>
-            <P>Summary: {{ post.summary}}</P>
+            <p><strong> Submitted by:</strong> {{ post.author }}</p>
+            <p><strong>Publish date:</strong> {{ post.publish_date }}</p>
+            <p><strong>Topic:</strong> {{ post.topic }} </p>
+            <P><strong>Summary:</strong> {{ post.summary}}</P>
+            <P><strong>Likes:</strong> {{ post.number_of_likes }} </P>
         </div>
     </div>
 </div>
