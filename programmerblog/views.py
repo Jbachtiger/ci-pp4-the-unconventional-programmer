@@ -3,6 +3,8 @@ from django.shortcuts import redirect, reverse, get_object_or_404
 from django.views import generic, View
 from django.urls import reverse_lazy
 from django.http import HttpResponseRedirect
+from django.contrib import messages
+from django.contrib.messages.views import SuccessMessageMixin
 from .models import Post, Comment
 from .forms import PostForm, EditForm, CommentForm
 
@@ -28,6 +30,7 @@ class PostDetail(generic.DetailView):
             post = self.get_object()
             form.instance.user = request.user
             form.instance.post = post
+            messages.add_message(request, messages.INFO, 'Comment submitted')
             form.save()
             return redirect(reverse("post-detail", kwargs={
                 'slug': post.slug
@@ -66,24 +69,33 @@ class PostLike(View):
         return HttpResponseRedirect(reverse('post-detail', args=[slug]))
 
 
-class CreatePost(generic.CreateView):
+class CreatePost(SuccessMessageMixin, generic.CreateView):
     ''' Class to allow posts to be created '''
     model = Post
     form_class = PostForm
     template_name = 'create_post.html'
+    success_message = "Post was created successfully"
+
+    
 
 
-class EditPost(generic.UpdateView):
+class EditPost(SuccessMessageMixin, generic.UpdateView):
     ''' Class to allow posts to be edited '''
     model = Post
     form_class = EditForm
     template_name = 'edit_post.html'
+    success_message = "Post was edited successfully"
     
 
 
-class DeletePost(generic.DeleteView):
+class DeletePost(SuccessMessageMixin, generic.DeleteView):
     ''' Class to allow posts to be deleted '''
     model = Post
     template_name = 'delete_post.html'
     success_url = reverse_lazy('home')
-    
+    success_message = "Post was deleted successfully"
+    # Display delete message once a post is deleted on the homepage blog post list
+    # Solution implemented using Stack Overflow answer and amended to work with my project
+    def delete(self, request, *args, **kwargs):
+        messages.warning(self.request, self.success_message)
+        return super(DeletePost, self).delete(request, *args, **kwargs)
