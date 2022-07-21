@@ -6,17 +6,17 @@
 {% if user.is_authenticated %}
 <!-- Using an if statement to determine whether the user id matches post author id to enable editing of post -->
 {% if user.id == post.author.id  %}
-<h1 class="mt-4">Edit Post:</h1>
-
 <!-- Edit form -->
-<div class="form-group">
-    <form method="POST">
-        {% csrf_token %}
-        {{ form.media }}
-        {{ form.as_p }}
-        <button class="btn btn-success">Update</button>
-
-    </form>
+<div class="container edit-form">
+    <h1 class="mt-4 pt-3">Edit Post:</h1>
+    <div class="form-group">
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.media }}
+            {{ form.as_p }}
+            <button class="btn btn-success">Update</button>
+        </form>
+    </div>
 </div>
 {% else %}
 <h3>Access Denied. You do not have permission to view this page!</h3>

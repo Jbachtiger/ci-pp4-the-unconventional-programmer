@@ -78,7 +78,8 @@ body {
 }
 
 /* Create post page */
-.create-form {
+.create-form,
+.edit-form {
     background-color: #d3fbd8;
     border-radius: 20px;
     padding: 0 25px 20px;
