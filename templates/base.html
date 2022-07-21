@@ -15,6 +15,9 @@
         {% endblock %}
     </title>
 
+    <!-- Font awesome link -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+
     <!-- Bootstrap link -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
@@ -24,7 +27,7 @@
 
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-background">
         <div class="container-fluid">
             <a class="navbar-brand" href="{% url 'home' %}">The Unconventional Programmer</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -84,6 +87,25 @@
 
     <!-- Footer -->
     <footer class="footer mt-4 py-3 footer-background">
+        <!-- Social Links - taken from pp1 project and added Github to them-->
+        <ul class="footer-links">
+            <li>
+                <a href="https://github.com/Jbachtiger" target="_blank" rel="noopener" aria-label="Check out my Github page (Please be aware it opens in a new tab)">
+                    <i class="fab fa-github footer-icons"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/john-bachtiger/" target="_blank" rel="noopener" aria-label="Check out our Linkedin page (Please be aware it opens in a new tab)">
+                    <i class="fab fa-linkedin footer-icons"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Check out our Facebook page (Please be aware it opens in a new tab)"><i class="fab fa-facebook-square footer-icons"></i></a>
+            </li>
+            <li>
+                <a href="https://www.twitter.com" target="_blank" rel="noopener" aria-label="Check out our twitter page (Please be aware it opens in a new tab)"><i class="fab fa-twitter-square footer-icons"></i></a>
+            </li>
+        </ul>
         <p class="m-0 text-center text-white">Copyright &copy; The Unconventional Programmers. All rights reserved.</p>
     </footer>
 

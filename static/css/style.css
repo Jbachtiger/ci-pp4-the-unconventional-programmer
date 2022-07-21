@@ -23,6 +23,11 @@ body {
     width: 60%;
 }
 
+a {
+    text-decoration: none;
+    color: #0069BE;
+}
+
 
 /* Account pages e.g. signup, login, logout */
 .account-page-layout {
@@ -86,6 +91,12 @@ body {
     padding: 0 25px 20px;
 }
 
+/* Navbar */
+
+.navbar-background {
+    background-color: #8C6D89;
+}
+
 /* Button styles */
 .generic-btn {
     background-color: #ed5e93;
@@ -113,6 +124,29 @@ body {
 }
 
 /* Footer */
+
 .footer-background {
     background-color: #8C6D89;
+    padding-left: 30px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+footer ul {
+    text-align: center;
+}
+
+.footer-links>li {
+    display: inline;
+}
+
+.footer-icons {
+    font-size: 200%;
+    margin: 1%;
+    padding-top: 10px;
+    color: #fff;
+}
+
+.footer-icons:hover {
+    color: #000;
 }
