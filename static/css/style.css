@@ -23,6 +23,7 @@ body {
     width: 60%;
 }
 
+
 /* Account pages e.g. signup, login, logout */
 .account-page-layout {
     display: flex;
@@ -89,6 +90,14 @@ body {
 .generic-btn {
     background-color: #ed5e93;
     color: white;
+}
+
+.next-btn {
+    margin-left: 10px;
+}
+
+.prev-btn {
+    margin-right: 10px;
 }
 
 /* Forms */
