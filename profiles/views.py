@@ -13,6 +13,7 @@ def profile(request):
        returned to the template and pre-populate with user details,
        if both forms are valid then save.
     '''
+    form_class = UpdateProfileForm
     if request.method == 'POST':
         user_form = UpdateUserForm(request.POST, instance=request.user)
         profile_form = UpdateProfileForm(request.POST, request.FILES, instance=request.user.profile)

@@ -61,7 +61,7 @@
                     <button class="btn generic-btn btn-block mt-4 " type="submit">Comment</button>
                 </form>
                 {% else %}
-                <h4><a href="{% url 'account_signup' %}">Signup</a> or <a href="{% url 'account_login' %}">Login</a> to create a comment.</h4>
+                <h4 class="required-login"><a href="{% url 'account_signup' %}">Signup</a> or <a href="{% url 'account_login' %}">Login</a> to create a comment.</h4>
                 {% endif %}
             </div>
         </div>

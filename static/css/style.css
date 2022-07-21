@@ -47,6 +47,13 @@ body {
     color: #000;
 }
 
+.required-login {
+    background-color: #d3fbd8;
+    border-radius: 10px;
+    padding: 10px;
+    width: fit-content;
+
+}
 
 /* Delete post page */
 .delete-container {
@@ -63,6 +70,12 @@ body {
     padding: 20px;
 }
 
+/* Profile page */
+
+.profile-img {
+    height: 200px;
+    width: 200px;
+}
 
 /* Button styles */
 .generic-btn {
@@ -76,7 +89,10 @@ body {
     border-radius: 20px;
     width: fit-content;
     padding: 20px;
+}
 
+.profile-form {
+    background-color: #d3fbd8;
 }
 
 /* Footer */
