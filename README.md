@@ -22,6 +22,7 @@ The site provides role based permissions for users to interact with the central 
     - [Colour Scheme](#color-scheme)
     - [Fonts](#fonts)
 - [Agile](#agile)
+- [Database Schema](#database-schema)
 
 
 ## User Experience
@@ -137,7 +138,10 @@ As mentioned above, a kanban board was created using GitHub Projects [here](http
 
 ![Kanban Fourth Stage](docs/kanban/kanban-board-3.png)
 
+## Database Schema
+Smart Draw was used to create a database schema to visulise the types of custom models this project might require. This schema was used as a guide to what needed to be added into each model. In the end only the Blog Post, Comment and Profile models were used. AllAuth was also used for the authentication system. This uses the built in Django User Model.
 
+![Database Schema](docs/database-schema/database-schema.png)
 
 
 
