@@ -18,8 +18,10 @@ The site provides role based permissions for users to interact with the central 
     - [Epics](#epics)
     - [User Stories](#user-stories)
 - [Design](#design)
+    - [Wireframes](#wireframes)
+    - [Colour Scheme](#color-scheme)
+    - [Fonts](#fonts)
 - [Agile](#agile)
-
 
 
 ## User Experience
@@ -96,6 +98,19 @@ For ease of reading, I have also listed all the completed user stories below:
 - As a site owner I can create my site to be fully responsive so that it provides a good user experience on all devices
 
 ## Design
+### Wireframes
+Before coding commenced, a set of wireframes were created to help me visualise roughly what my website would look like on desktop, tablet and mobile. It provided a starting point for me in terms of design. The finialised project went through many iterations and has changed from the inital wireframes however, inspiration was taken from these wireframes. 
+
+![Homepage](docs/wireframes/homepage.png)
+
+![Blog Page](docs/wireframes/blog-page.png)
+
+![Profile](docs/wireframes/profile.png)
+
+![Sign in](docs/wireframes/sign-in.png)
+
+![Sign up](docs/wireframes/sign-up.png)
+
 ### Color Scheme
 - The colour scheme has been carefully chosen to ensure accessibility for all
 - The colours compliment each other and ensure text is easily read
@@ -106,19 +121,21 @@ For ease of reading, I have also listed all the completed user stories below:
 
 As well as #8C6D89(light purple), #fff (white).
 
+### Fonts
+The font used in this project was Roboto with a backup of sans-serif. It was chosen for it's easy readabilty for users. Fonts were imported using Google Fonts.
 
 ## Agile
 Throughout this project an agile approch was taken to developing the website. Each activity was broken down into smaller bite-sized more manageable actions from initially creating 6 Epics, which were then broken down into smaller User stories. Each of the user stories then had an acceptance criteria and list of tasks to complete. This made the overall project much more managable to build. GitHub labels were used to categorise the User Stories using the MoSCoW Prioritisation technique. This clealy defined what tasks were most important to complete and where the focus should be.
 
 As mentioned above, a kanban board was created using GitHub Projects [here](https://github.com/users/Jbachtiger/projects/2) to help keep track of all the tasks including Todo, In Progress, Done and Future Development.
 
-![Kanban First Stage](docs/kanban/The%20Unconventional%20Programmer%20-%20Kanban%20Board.png)
+![Kanban First Stage](docs/kanban/kanban-board.png)
 
-![Kanban Second Stage](docs/kanban/The%20Unconventional%20Programmer%20-%20Kanban%20Board%20-%201.png)
+![Kanban Second Stage](docs/kanban/kanban-board-1.png)
 
-![Kanban Third Stage](docs/kanban/The%20Unconventional%20Programmer%20-%20Kanban%20Board%20-%202.png)
+![Kanban Third Stage](docs/kanban/kanban-board-2.png)
 
-![Kanban Fourth Stage](docs/kanban/The%20Unconventional%20Programmer%20-%20Kanban%20Board%20-%203.png)
+![Kanban Fourth Stage](docs/kanban/kanban-board-3.png)
 
 
 
