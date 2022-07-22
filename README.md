@@ -17,6 +17,7 @@ The site provides role based permissions for users to interact with the central 
     - [Site Goals](#site-goals)
     - [Epics](#epics)
     - [User Stories](#user-stories)
+- [Agile](#agile)
 
 
 
@@ -93,6 +94,18 @@ For ease of reading, I have also listed all the completed user stories below:
 - As a user I can comment on blogs so that I can have a community discussion around the topic and gain further insights
 - As a site owner I can create my site to be fully responsive so that it provides a good user experience on all devices
 
+## Agile
+Throughout this project an agile approch was taken to developing the website. Each activity was broken down into smaller bite-sized more manageable actions from initially creating 6 Epics, which were then broken down into smaller User stories. Each of the user stories then had an acceptance criteria and list of tasks to complete. This made the overall project much more managable to build. GitHub labels were used to categorise the User Stories using the MoSCoW Prioritisation technique. This clealy defined what tasks were most important to complete and where the focus should be.
+
+As mentioned above, a kanban board was created using GitHub Projects [here](https://github.com/users/Jbachtiger/projects/2) to help keep track of all the tasks including Todo, In Progress, Done and Future Development.
+
+![Kanban First Stage](docs/kanban/The%20Unconventional%20Programmer%20-%20Kanban%20Board.png)
+
+![Kanban Second Stage](docs/kanban/The%20Unconventional%20Programmer%20-%20Kanban%20Board%20-%201.png)
+
+![Kanban Third Stage](docs/kanban/The%20Unconventional%20Programmer%20-%20Kanban%20Board%20-%202.png)
+
+![Kanban Fourth Stage](docs/kanban/The%20Unconventional%20Programmer%20-%20Kanban%20Board%20-%203.png)
 
 
 
