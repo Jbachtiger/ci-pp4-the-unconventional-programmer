@@ -151,25 +151,129 @@ Smart Draw was used to create a database schema to visulise the types of custom 
 
 ## Features
 ### Homepage
+
 A simplistic homepage which clearly shows the sites purpose. The user is able to look through various blog posts until they find one that interests them. The purpose of this section is to introduce the site, have minimal distractions so the users attention is immediately drawn to the blog posts.
+
 ![Homepage](docs/features/hompage-website.png)
 
 ### Navbar
-The navigation bar is featured on all pages, is responsive and has active links functionality so the user knows which link they are on by hover on it in the navbar. It is identical on all pages and is easy to user to provide a good user experience. For mobile view the navbar reduces to a burger menu. The purpos of this feature is to allow users to navigate all pages easily across all devices without having to use a back button to get to the next page.
+
+The navigation bar is featured on all pages, is responsive and has active links functionality so the user knows which link they are on by hovering on it in the navbar. It is identical on all pages and is easy to user to provide a good user experience. For mobile view the navbar reduces to a burger menu. The purpose of this feature is to allow users to navigate all pages easily across all devices without having to use a back button to get to the next page. Their is also authentication in place which will change what displays on the navbar depending on whether a user is logged in or not.
+
+- Logged out Navbar
+
+![Navbar](docs/features/logged-out-navbar.png)
+
+
+- Logged in Navbar
+
 ![Navbar](docs/features/navbar.png)
 
 ### Footer
+
 The footer section includes links to relevant social links which all open up in a new tab to allow easy navigation for the user. They also have a hover effect added to them to make them stand out more and obivious to click. The copyright section is in place for legal reasons and the date is automatically updated using JavaScript. The footer is a good way to encourage users to connect via social media.
+
 ![Footer](docs/features/footer.png)
 
-### Blog Post - List View
+### Blog Posts - List View
+
 The blog posts on the homepage are displayed in a single list view and provide a summary of what the blog contains. This provides user some quick information to see if they would like to find out more information about it including who submitted it, when it was published, the topic of the post, a short summary and how many likes it has received. This fields have all been included to provide the user a better experience and be able to make an informed decision as to whether they would like to continue into the blog post to read it.
+
 ![Blog Post - List View](docs/features/blog-post-list-view.png)
 
 ### Pagination
+
 The blog posts have had pagination functionality added to them so that 3 posts are displayed on each page. This has been implemented to improve the user experience and not overwhelm the user with information and blog posts. 
+
 ![Pagination](docs/features/pagination.png)
 
-### Post
-Each post has a title followed by a submitted by field. The main content is then added using the WYSIWYG CKeditor which provides basic styling and image uploads. At the bottm of the blog post there is a section for users to leave comments and talk to each other as well as a like/unlike option. The purpose of the blog layout is to make it as easy as possible for user to read the content, digest it and then contribute to it in the form of comments and likes. 
+### Blog Post
+
+Each post has a title followed by a submitted by field. There are also Edit and Delete buttons which have been put at the top of the page to ensure the user doesn't miss them. The main content is then added using the WYSIWYG CKeditor which provides basic styling and image uploads. At the bottm of the blog post there is a section for users to leave comments and talk to each other as well as a like/unlike option. The purpose of the blog layout is to make it as easy as possible for user to read the content, digest it and then contribute to it in the form of comments and likes. 
+
 ![Read Post](docs/features/read-post.png)
+
+### Comments
+
+Each blog post has a comment section where users can post their comments for that specific blog. The user can see the number of comments that have been made on the post, the name of the user who wrote each comment and when that comment was published. Users can only make a comment when signed in and will be prompted to sign-in or sign-up to in order to leave comments. This is a great way for users to interact with each other and the publisher, discuss the topic and ask/answer questions.
+
+- Not signed into account
+
+![Comments](docs/features/comments.png)
+
+- Signed into account
+
+![Comments](docs/features/comment-1.png)
+
+### Likes
+
+The user also has the ability to like and unlike blog posts. The purpose of this is to proivde useful feedback to the community on how popular/good a post is by rewarding that post with likes. If a user changes their mind they are able to remove their like from a post. Each like is counted on the blog page as well as on the homepage where the blog list sits. If a post is unliked by a user this is reflected in the count.
+
+- Like
+
+![Like](docs/features/like.png)
+
+- Unlike
+
+![Unlike](docs/features/unlike.png)
+
+### Login / Logout / Sign-up
+
+Django Allauth was installed and used to create the register, sign-in and sign-out functionality meaning the project would have the authentication foundations in place to expand functionality in future. These pages are needed to provide authenication and to allow users access to content that is restricted to those who have created a login. 
+
+- Login
+
+![Login](docs/features/login.png)
+
+- Logout
+
+![Logout](docs/features/logout.png)
+
+- Sign-up
+
+![Register](docs/features/register.png)
+
+### Create a Post
+
+If the user is logged in they can create a post. Current fields being captured include title, title tag, summary (which is used to display on the homepage), body (using the ckeditor) and topic. 
+
+![Create a Post](docs/features/create-a-post.png)
+
+### Edit a Post
+
+If the user is logged in they can edit a post they have created but not anyone elses. Same fields are included as with create a post.
+
+![Edit a Post](docs/features/edit-a-post.png)
+
+### Delete a Post
+
+Once a user has created a post they have the ability to delete their own post. They can do this by access the blog which they have created and wish to delete and clicking the delete button at the top of the page. They will then be taken a page asking them if they are sure they wish to delete their blog and to click confirm or go back to their blog page. 
+
+![Delete a Post](docs/features/delete-a-post.png)
+
+### Profile
+
+Once a user registers, they will have a profile page automatically created for them. The link to their profile page will appear in the navigation bar once logged in. If they navigate to this page, they will be able to update their username, email address, add a bio and upload an image. The purpose of this page is to proivde users with more control over their account and start to be able to customise their data. 
+
+![Profile](docs/features/profile-signed-in.png)
+
+### Messages
+
+To provide users with more feedback after they take certain actions, a messaging system has been added to let users know their desired actions have occured. For example:
+
+-  Login
+
+![Login](docs/features/login-message.png)
+
+- Logout
+
+![Logout](docs/features/logout-message.png)
+
+- Profile Updated
+
+![Profile Updated](docs/features/profile-message.png)
+
+These messages last for 2 seconds before automatically being timed out. Alternatively the user can click a little x to remove them.
+
+
+
