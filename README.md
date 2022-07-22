@@ -23,6 +23,7 @@ The site provides role based permissions for users to interact with the central 
     - [Fonts](#fonts)
 - [Agile](#agile)
 - [Database Schema](#database-schema)
+- [Features](#features)
 
 
 ## User Experience
@@ -102,15 +103,20 @@ For ease of reading, I have also listed all the completed user stories below:
 ### Wireframes
 Before coding commenced, a set of wireframes were created to help me visualise roughly what my website would look like on desktop, tablet and mobile. It provided a starting point for me in terms of design. The finialised project went through many iterations and has changed from the inital wireframes however, inspiration was taken from these wireframes. 
 
+- Homepage
 ![Homepage](docs/wireframes/homepage.png)
 
+- Blog Page
 ![Blog Page](docs/wireframes/blog-page.png)
 
+- Profile
 ![Profile](docs/wireframes/profile.png)
 
-![Sign in](docs/wireframes/sign-in.png)
+- Sign-in
+![Sign-in](docs/wireframes/sign-in.png)
 
-![Sign up](docs/wireframes/sign-up.png)
+- Sign-up
+![Sign-up](docs/wireframes/sign-up.png)
 
 ### Color Scheme
 - The colour scheme has been carefully chosen to ensure accessibility for all
@@ -143,6 +149,27 @@ Smart Draw was used to create a database schema to visulise the types of custom 
 
 ![Database Schema](docs/database-schema/database-schema.png)
 
+## Features
+### Homepage
+A simplistic homepage which clearly shows the sites purpose. The user is able to look through various blog posts until they find one that interests them. The purpose of this section is to introduce the site, have minimal distractions so the users attention is immediately drawn to the blog posts.
+![Homepage](docs/features/hompage-website.png)
 
+### Navbar
+The navigation bar is featured on all pages, is responsive and has active links functionality so the user knows which link they are on by hover on it in the navbar. It is identical on all pages and is easy to user to provide a good user experience. For mobile view the navbar reduces to a burger menu. The purpos of this feature is to allow users to navigate all pages easily across all devices without having to use a back button to get to the next page.
+![Navbar](docs/features/navbar.png)
 
+### Footer
+The footer section includes links to relevant social links which all open up in a new tab to allow easy navigation for the user. They also have a hover effect added to them to make them stand out more and obivious to click. The copyright section is in place for legal reasons and the date is automatically updated using JavaScript. The footer is a good way to encourage users to connect via social media.
+![Footer](docs/features/footer.png)
 
+### Blog Post - List View
+The blog posts on the homepage are displayed in a single list view and provide a summary of what the blog contains. This provides user some quick information to see if they would like to find out more information about it including who submitted it, when it was published, the topic of the post, a short summary and how many likes it has received. This fields have all been included to provide the user a better experience and be able to make an informed decision as to whether they would like to continue into the blog post to read it.
+![Blog Post - List View](docs/features/blog-post-list-view.png)
+
+### Pagination
+The blog posts have had pagination functionality added to them so that 3 posts are displayed on each page. This has been implemented to improve the user experience and not overwhelm the user with information and blog posts. 
+![Pagination](docs/features/pagination.png)
+
+### Post
+Each post has a title followed by a submitted by field. The main content is then added using the WYSIWYG CKeditor which provides basic styling and image uploads. At the bottm of the blog post there is a section for users to leave comments and talk to each other as well as a like/unlike option. The purpose of the blog layout is to make it as easy as possible for user to read the content, digest it and then contribute to it in the form of comments and likes. 
+![Read Post](docs/features/read-post.png)
