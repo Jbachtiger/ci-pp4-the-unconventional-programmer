@@ -24,6 +24,20 @@ The site provides role based permissions for users to interact with the central 
 - [Agile](#agile)
 - [Database Schema](#database-schema)
 - [Features](#features)
+    - [Homepage](#homepage)
+    - [Navbar](#navbar)
+    - [Footer](#footer)
+    - [Blog Posts List](#blog-posts-list)
+    - [Pagination](#pagination)
+    - [Blog Post](#blog-post)
+    - [Comments](#comments)
+    - [Likes](#likes)
+    - [Login/Logout/Sign-up](#login--logout--sign-up)
+    - [Create a Post](#create-a-post)
+    - [Edit a Post](#edit-a-post)
+    - [Delete a Post](#delete-a-post)
+    - [Profile](#profile)
+    - [Messages](#messages)
 
 
 ## User Experience
@@ -175,7 +189,7 @@ The footer section includes links to relevant social links which all open up in 
 
 ![Footer](docs/features/footer.png)
 
-### Blog Posts - List View
+### Blog Posts List
 
 The blog posts on the homepage are displayed in a single list view and provide a summary of what the blog contains. This provides user some quick information to see if they would like to find out more information about it including who submitted it, when it was published, the topic of the post, a short summary and how many likes it has received. This fields have all been included to provide the user a better experience and be able to make an informed decision as to whether they would like to continue into the blog post to read it.
 
