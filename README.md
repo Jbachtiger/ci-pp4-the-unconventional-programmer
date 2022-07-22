@@ -17,6 +17,7 @@ The site provides role based permissions for users to interact with the central 
     - [Site Goals](#site-goals)
     - [Epics](#epics)
     - [User Stories](#user-stories)
+- [Design](#design)
 - [Agile](#agile)
 
 
@@ -93,6 +94,18 @@ For ease of reading, I have also listed all the completed user stories below:
 - As a user I can like or unlike blog posts so that valuable blog posts are recognised as good content
 - As a user I can comment on blogs so that I can have a community discussion around the topic and gain further insights
 - As a site owner I can create my site to be fully responsive so that it provides a good user experience on all devices
+
+## Design
+### Color Scheme
+- The colour scheme has been carefully chosen to ensure accessibility for all
+- The colours compliment each other and ensure text is easily read
+- The colours are consistent throughout the website and are used for specific purposes
+- The main colours used throughout the website are:
+
+![Colour Palette](docs/colour-palette/colour-pallette.png)
+
+As well as #8C6D89(light purple), #fff (white).
+
 
 ## Agile
 Throughout this project an agile approch was taken to developing the website. Each activity was broken down into smaller bite-sized more manageable actions from initially creating 6 Epics, which were then broken down into smaller User stories. Each of the user stories then had an acceptance criteria and list of tasks to complete. This made the overall project much more managable to build. GitHub labels were used to categorise the User Stories using the MoSCoW Prioritisation technique. This clealy defined what tasks were most important to complete and where the focus should be.
