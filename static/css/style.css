@@ -104,6 +104,11 @@ a {
     background-color: #8C6D89;
 }
 
+.nav-link {
+    color: #fff;
+}
+
+
 /* Button styles */
 .generic-btn {
     background-color: #ed5e93;

@@ -8,7 +8,7 @@ class PostForm(forms.ModelForm):
     class Meta:
         '''Get post model and choose which fields to display ''' 
         model = Post
-        fields = ('title', 'title_tag', 'summary', 'author', 'body', 'topic', )
+        fields = ('title', 'title_tag', 'summary', 'author', 'body', 'topic',)
 
         widgets = {
             'title': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Title'}),
