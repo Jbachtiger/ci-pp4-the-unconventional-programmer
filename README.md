@@ -389,6 +389,8 @@ There is much functionality that can be added to this project in the future incl
  - [ColorSpace](https://mycolor.space/?hex=%23C8E6C9&sub=1) - used to generate colour pallets for use on website
  - [a11y](https://color.a11y.com/) - used to check website colour contrast and accessibility
  - [smartdraw](https://www.smartdraw.com/entity-relationship-diagram/er-diagram-tool.htm) - used to create the database schema 
+ - [Raw Pixel](https://www.rawpixel.com/) - used to find royalty free images
+ - [Favicon.io](https://favicon.io/favicon-generator/) - generated the websites favicon
 
 ### Databases
 
