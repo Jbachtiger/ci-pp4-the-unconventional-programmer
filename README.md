@@ -462,14 +462,43 @@ You can create a clone of your repository by:
 ## Credits
 
 ### Code
+1. [Dev](https://dev.to/earthcomfy/django-user-profile-3hik) - this website was used as a guide to creating a profile page - code was amended to my projects specific needs
+2. I Think Therefore I Blog - Code used for likes authentication and amended to suit my project
 
-### Content
+### Content 
+
+The content for the blog post was researched and taken from the following websites:
+
+1. Code Academy - [Coding Projects for Beginners](https://www.codecademy.com/resources/blog/coding-projects-for-beginners/)
+2. Create Learn - [Easy Games to Code](https://www.create-learn.us/blog/easy-games-to-code/)
+3. Zero To Mastery - [Programmer Success Stories](https://zerotomastery.io/blog/programmer-success-stories/)
+4. Harvey Ramer - [Stop Coding Under Stress: How to Avoid Bugs and the End of the World](https://www.harveyramer.com/article/2020-04-20-stop-coding-under-stress-how-to-avoid-bugs-and-the-end-of-the-world/)
+5. Code Academy - [10 Learner Stories Code](https://www.codecademy.com/resources/blog/10-learner-stories-code/)
+6. Rescue Time - [How to get work done when your not feeling it](https://blog.rescuetime.com/how-to-get-work-done-when-youre-not-feeling-it/)
+7. The Muse - [5 different types of imposter syndrome and 5 ways to battle each one](https://www.themuse.com/advice/5-different-types-of-imposter-syndrome-and-5-ways-to-battle-each-one)
 
 ### Media
 
+All images used in the blog posts was taken directly from the posts sources as detailed above in the content section.
+
 ### Resources
 
+1. [Stack Overflow](https://stackoverflow.com/questions/46617375/how-do-i-show-an-active-link-in-a-django-navigation-bar-dropdown-list) - post helped my understanding of how to show active links in the django navigation bar
+2. [PyPi](https://pypi.org/project/django-active-link/) - provided further reading on how to use django active links
+3. [Django CKeditor](https://django-ckeditor.readthedocs.io/en/latest/#field) - provided documentation of how the ckeditor works
+4. [Kerstin Martin](https://kerstinmartin.com/blog/copyright-notice) - provided useful information as to how it is possible to automatically update the footer date each year
+5. [CSS Tricks](https://css-tricks.com/couple-takes-sticky-footer/) - used to read up on various ways to create a sticky footer
+6. [Selmi Tech](https://www.youtube.com/watch?v=QWNxscgCGfw&ab_channel=SelmiTech) - used to understand how to implement comments functionality in my post-detail page
+7. [Learn Django](https://learndjango.com/tutorials/django-slug-tutorial) - helped understanding of how django slugs work 
+8. [Codemy](https://www.youtube.com/c/Codemycom) - provided ideas as to what functionality to add to a blog website and how django can be utilised 
+9. I Think Therefore I Blog Walkthrough - used to understand and reinforce concepts
+
+
 ### Acknowledgements
+- My mentor for their support, advice and patience when reviewing this project with me
+- The Code Institute slack community for always being on hand to ask questions and pointing me in the right direction
+- Tutor support for their gudiance in solving bugs and pointing me in the right way to fix issues
+- My partner, for being so patient with me whilst creating this project and for testing the website 
 
 
 
