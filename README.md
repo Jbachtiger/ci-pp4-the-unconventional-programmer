@@ -53,6 +53,7 @@ The site provides role based permissions for users to interact with the central 
 - [Technologies Used](#technologies-used)
     - [Languages Used](#languages-used)
     - [Frameworks, Libraries and Programs](#frameworks-libraries-and-programs)
+    - [Databases](#databases)
 - [Deployment](#deployment)
     - [Deploying to Heroku](#deploying-to-heroku)
     - [Forking Repository](#forking-repository)
@@ -365,8 +366,34 @@ There is much functionality that can be added to this project in the future incl
 ## Technologies Used
 
 ### Languages Used
+ - [Python](https://www.python.org/)
+ - [HTML](https://developer.mozilla.org/en-US/docs/Glossary/HTML5)
+ - [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+ - [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
 ### Frameworks, Libraries and Programs
+ - [Heroku](https://www.heroku.com/) - this was the platform used to deploy the application
+ - [Django](https://www.djangoproject.com/) - Python framework used to create backend logic
+ - [Bootstrap 5](https://getbootstrap.com/) - CSS framework used to develop responsiveness and mobile first approach
+ - [Django-allauth](https://django-allauth.readthedocs.io/en/latest/) - authentication library used to create user accounts
+ - [Gitpod](https://gitpod.io/projects) - this was my code editor for this project
+ - [Git](https://git-scm.com/) - was used for version control using the terminal through Gitpod to commit to Git and push to Github
+ - [Github](https://github.com/) - is used to store the code for this project after being pushed from Git
+ - [Techsini](http://techsini.com/multi-mockup/index.php) - was used to generate multi-device website mockups
+ - [Fireshot](https://chrome.google.com/webstore/detail/take-webpage-screenshots/mcbpblocgmgfnpjjppndjkmgjaogfceg?hl=en) - this was a Google Chrome extension used to take screenshots
+ - [PEP8 Online](http://pep8online.com/) - was used to validate python code to ensure no errors were present
+ - [Google Fonts](https://fonts.google.com/) - used to import fonts to website 
+ - [Font Awesome](https://fontawesome.com/) - library of icons used for social media and services we offer
+ - [Balsamiq](https://balsamiq.com/) - was used to create the wireframes during the design process.
+ - [GoogleDev Tools](https://developer.chrome.com/docs/devtools/) - was used to help investigate issues with code and visually see what code was related to which area on the page
+ - [ColorSpace](https://mycolor.space/?hex=%23C8E6C9&sub=1) - used to generate colour pallets for use on website
+ - [a11y](https://color.a11y.com/) - used to check website colour contrast and accessibility
+ - [smartdraw](https://www.smartdraw.com/entity-relationship-diagram/er-diagram-tool.htm) - used to create the database schema 
+
+### Databases
+
+- SQLite: local database used to test on during development
+- PostgreSQL: dabase used in Heroku to store data on deployment
 
 
 ## Deployment
