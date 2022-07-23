@@ -467,7 +467,7 @@ You can create a clone of your repository by:
 
 ### Content 
 
-The content for the blog post was researched and taken from the following websites:
+The content for the blog post was taken purely for illustrative purposes and not written by me. Below are the details of who wrote each post and where it was taken from:
 
 1. Code Academy - [Coding Projects for Beginners](https://www.codecademy.com/resources/blog/coding-projects-for-beginners/)
 2. Create Learn - [Easy Games to Code](https://www.create-learn.us/blog/easy-games-to-code/)
