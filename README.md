@@ -38,6 +38,7 @@ The site provides role based permissions for users to interact with the central 
     - [Delete a Post](#delete-a-post)
     - [Profile](#profile)
     - [Messages](#messages)
+- [Future Development](#future-development)
 
 
 ## User Experience
@@ -289,5 +290,30 @@ To provide users with more feedback after they take certain actions, a messaging
 
 These messages last for 2 seconds before automatically being timed out. Alternatively the user can click a little x to remove them.
 
+### Admin Page
+
+A superuser was created for this project to manage the backend admin section. Users with admin access have more functionality than normal users such as create, read, update and delete information such as users, posts, profiles and comments.
+
+Access is restricted to approved admins only and can be accessed by adding /admin to the URL on the homepage and signing in if not already signed in through the front end of the site.
+
+![Admin](docs/features/admin-page.png)
+
+## Future Development
+
+There is much functionality that can be added to this project in the future including:
+
+- Blog search - a search box could be included on the homepage to allow users to search the site for posts by topic, author etc
+
+- Dark Mode Customisation -  adding the ability to view the site in dark mode as this is a preferred method for developer to work with code and would be a nice add on
+
+- Creating the functionality for users to be able to delete their account through their profile page and not just through admin
+
+- Allowing users to reset/change their passwords
+
+- Report abusive/innapropriate comments flag - this would alert an staff member/admin user to then manually review a comment and be able to remove it if deemed abusive/innapropriate
+
+- Add comment nesting so that users are able to see specfic responses to their comments
+
+- The ability for users to login via social networks such as Google or Facebook 
 
 
