@@ -39,7 +39,30 @@ The site provides role based permissions for users to interact with the central 
     - [Profile](#profile)
     - [Messages](#messages)
 - [Future Development](#future-development)
-
+- [Testing](#testing)
+    - [Manual Testing](#manual-testing)
+    - [Automated Testing](#automated-testing)
+    - [Browser and Device Testing](#browser-and-device-testing)
+    - [W3C Validator](#w3c-validatior)
+    - [JS Lint](#js-lint)
+    - [PEP8 Online](#pep8-online)
+    - [Colour Contrast Checks](#colour-contrast-checks)
+    - [Lighthouse Tool](#lighthouse-tool)
+- [Solved Bugs](#solved-bugs)
+- [Known Bugs](#known-bugs)
+- [Technologies Used](#technologies-used)
+    - [Languages Used](#languages-used)
+    - [Frameworks, Libraries and Programs](#frameworks-libraries-and-programs)
+- [Deployment](#deployment)
+    - [Deploying to Heroku](#deploying-to-heroku)
+    - [Forking Repository](#forking-repository)
+    - [Cloning Repository](#cloning-repository)
+- [Credits](#credits)
+    - [Code](#code)
+    - [Content](#content)
+    - [Media](#media)
+    - [Resources](#resources)
+    - [Acknowledgements](#acknowledgements)
 
 ## User Experience
 ### Site Goals
@@ -338,6 +361,14 @@ There is much functionality that can be added to this project in the future incl
 
 ## Known Bugs
 
+
+## Technologies Used
+
+### Languages Used
+
+### Frameworks, Libraries and Programs
+
+
 ## Deployment
 
 ### Deploying to Heroku
@@ -401,8 +432,17 @@ You can create a clone of your repository by:
 5. Type 'git clone' and paste the https link you copied from GitHub
 6. Press enter and git will clone the repository to your local machine
 
+## Credits
 
+### Code
 
+### Content
+
+### Media
+
+### Resources
+
+### Acknowledgements
 
 
 
