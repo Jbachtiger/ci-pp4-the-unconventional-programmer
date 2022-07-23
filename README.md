@@ -316,4 +316,95 @@ There is much functionality that can be added to this project in the future incl
 
 - The ability for users to login via social networks such as Google or Facebook 
 
+## Testing
+
+### Manual Testing
+
+### Automated Testing
+
+### Browser and Device Testing
+
+### W3C Validatior
+
+### JS Lint
+
+### PEP8 Online
+
+### Colour Contrast Checks
+
+### Lighthouse Tool
+
+## Solved Bugs
+
+## Known Bugs
+
+## Deployment
+
+### Deploying to Heroku
+
+This application has been deployed using Heroku by following these steps:
+
+1. Commit all changes and push them to GitHub
+2. Log in to Heroku or create a new account
+3. From the Heroku dashboard click the "Create New App" button
+4. Enter the name of your app and the region you're located in. Then click "Create App". It is worth noting that your app name must be unique for Heroku to accept it
+5. In your app go to Resources tab and add a Heroku Postgres database. This can be done by searching for postgres in the Add-ons search box, select Heroku Postgres and choose the HobbyDev - Free option and submit
+6. Click on the "Settings" tab and scroll down to reveal config vars
+7. This will provide the Postgres Database URL, click on the url box and copy it
+8. Navigate over to your code, create a new file in the same directory as your manage.py file and name it env.py (this will be used to store secret environment variable whilst in development)
+9. Within this file import os library, and set the environment variable for the DATABASE_URL pasting in the address copied from Heroku. The line should appear as os.environ["DATABASE_URL"]= "YOUR Postgres Database URL from Heroku"
+10. Below DATABASE_URL add the secret key using os.environ["SECRET_KEY"] = "your secret key goes here"
+11. Add the secret key just created to the Heroku Config Vars as SECRET_KEY for the KEY value and the secret key value you created as the VALUE
+12. Navigate back to your code and go to your settings.py file and import Path from pathlib, import os and import dj_database_url (near top of your settings page)
+13. Insert the line -  if os.path.isfile("env.py"): import env
+14. Move down to the secret key section in the settings.py file, remove insecure key and replace it with SECRET_KEY = os.environ.get('SECRET_KEY')
+15. Scroll down further and wire up postgres database by replacing the databases section with DATABASES = { 'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))} ensure the correct indentation for python is used.
+16. In the terminal migrate the models over to the new database connection
+17. In a browser, search for Cloudinary and either login or create an account and login
+18. Navigate to the Cloudinary dashboard and copy the CLOUDINARY_URL by clicking the copy to clipboard link
+19. Go back to your code and in the env.py file add a line at the bottom - os.environ["CLOUDINARY_URL"] = "paste in the Url copied to the clipboard here"
+20. In Heroku, go to settings and add the CLOUDINARY_URL and value copied to the clipboard to the config vars
+21. Also add in DISABLE_COLLECTSTATIC with the Value - 1 and PORT with the value of 8000 to the config vars
+22. The DISABLE_COLLECTSTATIC key value pair must be removed prior to final deployment
+23. Back in your settings.py file, add the cloudinary libraries to the list of installed apps, the order they are inserted is important, 'cloudinary_storage' goes above 'django.contrib.staitcfiles' and 'cloudinary' goes below it
+24. Scroll down near the end of the file and below STATIC_URL add the STATIC files settings - the url, storage path, directory path, root path, media url and default file storage path
+25. Link the file to the templates directory in Heroku TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
+26. Change the templates directory to TEMPLATES_DIR - 'DIRS': [TEMPLATES_DIR]
+27. Add Heroku host name into ALLOWED_HOSTS - the format will be the app name given in Heroku when creating the app followed by .herokuapp.com
+28. In your IDE, create three new top level folders, media, static, templates
+29. Create a new file on the top level directory called 'Procfile' and add the following code to it web: guincorn PROJECT_NAME.wsgi
+30. In the terminal, save files, add the changed files, commit and push to GitHub
+31. In Heroku go to the "Deploy" tab and scroll down to the "Deployment Method" section
+32. Select "GitHub" as the method and click "Connect to GitHub"
+33. Scroll down to the "Connet to GitHub" section and search for the repository name you wish to deploy. Do this by typing in the depository name and click the "Search button 
+34. Once the repository has been found, connect it by clicking the "Connect" button next to its name
+35. Choose "Automatic deploys" or "Manual deploys" to deploy your application - watch the build logs for any errors.
+36. Heroku will now build the app for you. Once it has completed the build process you will see a 'Your App Was Successfully Deployed' message and a link to the app to visit the live site.
+
+### Forking Repository
+
+You can fork the GitHub repository to make a copy of the original to view and change without effecting the orginial. This can be done by:
+
+1. Log into GitHub or create an account
+2. Locate the repository at https://github.com/Jbachtiger/ci-pp4-the-unconventional-programmer
+3. At the top of the repository, on the right hand side of the page you will see an option to select "Fork" from the avialble buttons
+4.  Click the fork button and a copy of the repository will have been created
+
+### Cloning Repository
+
+You can create a clone of your repository by:
+
+1. Locate your repository you wish to clone https://github.com/Jbachtiger/ci-pp4-the-unconventional-programmer
+2. Click the arrow on the 'Code' button at the top of the list of files
+3. Select the clone by https and copy the URL using the provided clipboard
+4. Navigate to your chosen code editor and within the terminal change the directory to the location your to clone the repository to
+5. Type 'git clone' and paste the https link you copied from GitHub
+6. Press enter and git will clone the repository to your local machine
+
+
+
+
+
+
+
 
