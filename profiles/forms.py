@@ -24,3 +24,4 @@ class UpdateProfileForm(forms.ModelForm):
     class Meta:
         model = Profile
         fields = ['bio', 'profile_image']
+        
