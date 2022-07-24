@@ -9,4 +9,5 @@ urlpatterns = [
     path('', include('programmerblog.urls')),
     path('accounts/', include('allauth.urls')),
     path('profile/', user_views.profile, name='profile'),
+    path('summernote/', include('django_summernote.urls')),
 ]

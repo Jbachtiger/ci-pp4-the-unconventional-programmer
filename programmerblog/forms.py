@@ -1,6 +1,8 @@
 ''' Forms for Posts, Edit and Comments '''
 from django import forms
+from django_summernote.widgets import SummernoteWidget
 from .models import Post, Comment
+
 
 
 class PostForm(forms.ModelForm):
@@ -14,7 +16,7 @@ class PostForm(forms.ModelForm):
             'title': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Title'}),
             'author': forms.TextInput(attrs={'class': 'form-control', 'value': '', 'id': 'author_field', 'type': 'hidden'}),
             'title_tag': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Title of post for SEO purposes'}),
-            'body': forms.Textarea(attrs={'class': 'form-control', 'placeholder': 'Get creative and write your content here'}),
+            'body': SummernoteWidget(attrs={'class': 'form-control', 'placeholder': 'Get creative and write your content here'}),
             'topic': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'e.g. Coding, Imposter Syndrome, Jobs'}),
             'summary': forms.Textarea(attrs={'class': 'form-control', 'placeholder': 'Brief overview of your post'})
         }
@@ -30,7 +32,7 @@ class EditForm(forms.ModelForm):
         widgets = {
             'title': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Title'}),
             'title_tag': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Title of post for SEO purposes'}),
-            'body': forms.Textarea(attrs={'class': 'form-control', 'placeholder': 'Get creative and write your content here'}),
+            'body': SummernoteWidget(attrs={'class': 'form-control', 'placeholder': 'Get creative and write your content here'}),
             'topic': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'e.g. Coding, Imposter Syndrome, Jobs'}),
             'summary': forms.Textarea(attrs={'class': 'form-control', 'placeholder': 'Brief overview of your post'})
         }
