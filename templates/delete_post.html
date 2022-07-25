@@ -29,14 +29,12 @@
             </div>
         </div>
     </div>
-    {% else %}
-    <div class="mt-4 delete-container">
-        <!-- If user is not logged in the following message will show up when landing on the create post page -->
-        <h3>Access Denied. You do not have permission to view this page!</h3>
-    </div>
 </div>
+{% else %}
+<div class="mt-4 delete-container">
+    <!-- If user is not logged in the following message will show up when landing on the create post page -->
+    <h3>Access Denied. You do not have permission to view this page!</h3>
+</div>
+
 {% endif %}
-
-
-
 {% endblock %}
