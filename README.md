@@ -374,6 +374,34 @@ The website was viewed on a variety of devices of all sizes including:
 
 ### W3C Validatior
 
+The official W3C Markup Validator was used to validate both the html and css of the project to ensure there were no syntax errors within the site. 
+
+__W3C HTML Markup Validator__
+
+The below screenshots show the error messages that were found during the html pages validation process. All errors have been fixed and none remian on any of the html pages.
+
+![HTML Error 1](docs/testing/html-error-1.png)
+
+[Link to commit](https://github.com/Jbachtiger/ci-pp4-the-unconventional-programmer/commit/170c50818ef3ae229b1f13770a6d5d77efe045de) for fix
+
+![HTML Error 2](docs/testing/html-error-2.png)
+
+[Link to commit](https://github.com/Jbachtiger/ci-pp4-the-unconventional-programmer/commit/4bbda0d2480e81597f9616013f9671f5b1bd73ca) for fix
+
+![HTML Error 3](docs/testing/html-error-3.png)
+
+[Link to commit](https://github.com/Jbachtiger/ci-pp4-the-unconventional-programmer/commit/d697f43a2ffc536cee91b12ae11a3c03d17b83cd) for fix
+
+![HTML Error 4](docs/testing/html-validation-pass.png)
+
+
+All passed pages:
+
+- [home.html](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fthe-unconventional-programmer.herokuapp.com%2F)
+- [create_post.html](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fthe-unconventional-programmer.herokuapp.com%2Fcreate-post%2F)
+- [delete_post.html](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fthe-unconventional-programmer.herokuapp.com%2Fpost%2F5-different-types-of-imposter-syndrome-and-5-ways-to-battle-each-one%2Fdelete)
+- [edit_post.html](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fthe-unconventional-programmer.herokuapp.com%2Fpost%2Fedit%2F5-different-types-of-imposter-syndrome-and-5-ways-to-battle-each-one)
+- [post_details.html](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fthe-unconventional-programmer.herokuapp.com%2Fpost%2F5-different-types-of-imposter-syndrome-and-5-ways-to-battle-each-one)
 
 
 __W3C CSS Markup Validatior__ - https://jigsaw.w3.org/css-validator/validator
