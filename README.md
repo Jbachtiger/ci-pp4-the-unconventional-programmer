@@ -356,7 +356,18 @@ There is much functionality that can be added to this project in the future incl
 
 ### Colour Contrast Checks
 
+Colour contrast checks have been made on the site using the Colour Contrast Accessibility Validator by a11y.  All pages passed the colour contrast analysis except for the cta button element on each page. The pink button with the white text didn't allow for a great enough contrast. Therefore, I decided to change the button colour to a less bright pink (#ED91B3) and the text colour to black. This increased the contrast and ensured maximum accessibility making the contrast ratio within acceptable range. 
+
+The results are show below:
+
+![Colour Contrast Check](docs/testing/colour-contrast-checker.png)
+
+![Colour Contrast Check Button Pass](docs/testing/colour-contrast-pass.png)
+
+
 ### Lighthouse Tool
+
+
 
 ## Solved Bugs
 
@@ -494,6 +505,9 @@ All images used in the blog posts was taken directly from the posts sources as d
 7. [Learn Django](https://learndjango.com/tutorials/django-slug-tutorial) - helped understanding of how django slugs work 
 8. [Codemy](https://www.youtube.com/c/Codemycom) - provided ideas as to what functionality to add to a blog website and how django can be utilised 
 9. I Think Therefore I Blog Walkthrough - used to understand and reinforce concepts
+10. [Django Summernote](https://github.com/summernote/django-summernote) - the documentation was helpful in figuring out how to use summernote and make it responsive
+
+
 
 
 ### Acknowledgements
