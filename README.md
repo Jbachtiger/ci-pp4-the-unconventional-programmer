@@ -45,7 +45,7 @@ The site provides role based permissions for users to interact with the central 
     - [Browser and Device Testing](#browser-and-device-testing)
     - [W3C Validator](#w3c-validatior)
     - [JS Lint](#js-lint)
-    - [PEP8 Online](#pep8-online)
+    - [PEP8 Linter Results](#pep8-linter-results)
     - [Colour Contrast Checks](#colour-contrast-checks)
     - [Lighthouse Tool](#lighthouse-tool)
 - [Solved Bugs](#solved-bugs)
@@ -352,7 +352,21 @@ There is much functionality that can be added to this project in the future incl
 
 ### JS Lint
 
-### PEP8 Online
+### PEP8 Linter Results
+
+All python files that I created were run through the PEP8 linter to validate such as models.py, views.py, forms.py etc and any errors picked up fixed. There are no errors left in these files.
+
+__Models.py File Example__
+
+- Errors in Models.py files
+
+![Models.py errors](docs/testing/pep8-errors.png)
+
+- All Models.py file errors fixed
+
+![Models.py error free](docs/testing/pep8-online.png)
+
+
 
 ### Colour Contrast Checks
 

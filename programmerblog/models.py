@@ -14,11 +14,17 @@ class Post(models.Model):
     title = models.CharField(max_length=255, unique=True)
     title_tag = models.CharField(max_length=255)
     slug = models.SlugField(max_length=255, unique=True)
-    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='blog_posts')
+    author = models.ForeignKey(
+        User, on_delete=models.CASCADE,
+        related_name='blog_posts')
     hero_image = CloudinaryField('image', default='placeholder')
-    publish_date = models.DateTimeField(auto_now_add=True)
+    publish_date = models.DateTimeField(
+        auto_now_add=True)
     likes = models.ManyToManyField(User, related_name='blog_likes', blank=True)
-    body = models.TextField(blank=False, null=False, default='Delete and add your body content')
+    body = models.TextField(
+        blank=False,
+        null=False,
+        default='Delete and add your body content')
     topic = models.CharField(max_length=255)
     summary = models.CharField(max_length=255, default='summary')
 
@@ -46,7 +52,11 @@ class Post(models.Model):
 
 class Comment (models.Model):
     ''' Model for Comment '''
-    user = models.ForeignKey(User, on_delete=models.CASCADE, blank=True, null=True)
+    user = models.ForeignKey(
+        User,
+        on_delete=models.CASCADE,
+        blank=True,
+        null=True)
     publish_date = models.DateTimeField(auto_now_add=True)
     post = models.ForeignKey('Post', on_delete=models.CASCADE)
     body = models.TextField()

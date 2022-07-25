@@ -1,7 +1,8 @@
 ''' Imports for blog admin page '''
 from django.contrib import admin
-from .models import Post, Comment
 from django_summernote.admin import SummernoteModelAdmin
+from .models import Post, Comment
+
 
 # Admin page functionality for posts
 

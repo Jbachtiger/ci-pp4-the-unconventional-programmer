@@ -9,14 +9,17 @@ from .forms import UpdateUserForm, UpdateProfileForm
 def profile(request):
     '''
     Import the required forms and create instances of those forms
-       depending on whether the request is get or post. This will be 
-       returned to the template and pre-populate with user details,
-       if both forms are valid then save.
+    depending on whether the request is get or post. This will be
+    returned to the template and pre-populate with user details,
+    if both forms are valid then save.
     '''
     form_class = UpdateProfileForm
     if request.method == 'POST':
         user_form = UpdateUserForm(request.POST, instance=request.user)
-        profile_form = UpdateProfileForm(request.POST, request.FILES, instance=request.user.profile)
+        profile_form = UpdateProfileForm(
+            request.POST,
+            request.FILES,
+            instance=request.user.profile)
 
         if user_form.is_valid() and profile_form.is_valid():
             user_form.save()
@@ -27,5 +30,7 @@ def profile(request):
         user_form = UpdateUserForm(instance=request.user)
         profile_form = UpdateProfileForm(instance=request.user.profile)
 
-    
-    return render(request, 'profile.html', {'user_form': user_form, 'profile_form': profile_form})
+    return render(request, 'profile.html', {
+        'user_form': user_form,
+        'profile_form': profile_form
+        })

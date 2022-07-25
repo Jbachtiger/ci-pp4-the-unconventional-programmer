@@ -24,7 +24,10 @@ class PostDetail(generic.DetailView):
     form = CommentForm
 
     def post(self, request, *args, **kwargs):
-        ''' Get the post by slug, validates comment form and redirects to post-detail page '''
+        '''
+        Get the post by slug, validates comment form
+        and redirects to post-detail page
+        '''
         form = CommentForm(request.POST)
         if form.is_valid():
             post = self.get_object()
@@ -42,8 +45,10 @@ class PostDetail(generic.DetailView):
         post = get_object_or_404(Post, slug=self.object.slug)
         if post.likes.filter(id=self.request.user.id).exists():
             liked = True
-        post_comments_count = Comment.objects.all().filter(post=self.object.id).count()
-        post_comments = Comment.objects.all().filter(post=self.object.id)
+        post_comments_count = Comment.objects.all().filter(
+            post=self.object.id).count()
+        post_comments = Comment.objects.all().filter(
+            post=self.object.id)
         context = super().get_context_data(**kwargs)
         context.update({
             'liked': liked,
@@ -56,8 +61,8 @@ class PostDetail(generic.DetailView):
 
 
 class PostLike(View):
-    ''' Class to allow liking funcitionality and redirect 
-        to post-detail page on like submit 
+    ''' Class to allow liking funcitionality and redirect
+        to post-detail page on like submit
     '''
     def post(self, request, slug, *args, **kwargs):
         post = get_object_or_404(Post, slug=slug)
@@ -76,8 +81,6 @@ class CreatePost(SuccessMessageMixin, generic.CreateView):
     template_name = 'create_post.html'
     success_message = "Post was created successfully"
 
-    
-
 
 class EditPost(SuccessMessageMixin, generic.UpdateView):
     ''' Class to allow posts to be edited '''
@@ -85,7 +88,6 @@ class EditPost(SuccessMessageMixin, generic.UpdateView):
     form_class = EditForm
     template_name = 'edit_post.html'
     success_message = "Post was edited successfully"
-    
 
 
 class DeletePost(SuccessMessageMixin, generic.DeleteView):
@@ -94,8 +96,12 @@ class DeletePost(SuccessMessageMixin, generic.DeleteView):
     template_name = 'delete_post.html'
     success_url = reverse_lazy('home')
     success_message = "Post was deleted successfully"
-    # Display delete message once a post is deleted on the homepage blog post list
-    # Solution implemented using Stack Overflow answer and amended to work with my project
+    '''
+    Display delete message once a post is deleted
+    on the homepage blog post list. Solution implemented using
+    Stack Overflow answer and amended to work with my project
+
+    '''
     def delete(self, request, *args, **kwargs):
         messages.warning(self.request, self.success_message)
         return super(DeletePost, self).delete(request, *args, **kwargs)
