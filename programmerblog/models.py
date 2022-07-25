@@ -18,7 +18,7 @@ class Post(models.Model):
     hero_image = CloudinaryField('image', default='placeholder')
     publish_date = models.DateTimeField(auto_now_add=True)
     likes = models.ManyToManyField(User, related_name='blog_likes', blank=True)
-    body = models.TextField(blank=True, null=True, default='Delete and add your body content')
+    body = models.TextField(blank=False, null=False, default='Delete and add your body content')
     topic = models.CharField(max_length=255)
     summary = models.CharField(max_length=255, default='summary')
 
