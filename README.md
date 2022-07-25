@@ -348,9 +348,37 @@ There is much functionality that can be added to this project in the future incl
 
 ### Browser and Device Testing
 
+__Browsers__
+
+- The website was tested on the following browsers: Goolge Chrome, Firefox, Microsoft Edge and Safari.
+- For each browser, functionality was tested including links and the responsive design.
+- The website performed as intended and the responsive design was checked using developer tools across multiple devices with structural integrity holding for the various sizes.
+
+__Devices Tested__
+
+The website was viewed on a variety of devices of all sizes including:
+- Windows 11 Desktop (screen resoultions tested in 2560x1080 and 1920x1080)
+- Macbook Pro (13 inch 2015 version)
+- Moto G4
+- Galaxy S5
+- Pixel 2
+- Pixel 2 XL
+- Iphone 5/SE
+- Iphone 6/7/8
+- Iphone 6/7/8 Plus
+- Iphone X
+- Ipad
+- Ipad Pro
+- Surface Duo
+
+
 ### W3C Validatior
 
+
+
 ### JS Lint
+
+The JavaScript code was checked using [jshint.com](jshint.com) and returned no errors.
 
 ### PEP8 Linter Results
 
