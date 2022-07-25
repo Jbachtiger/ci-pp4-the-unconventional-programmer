@@ -1,7 +1,10 @@
 // Script that executes message timeout
 
 setTimeout(function() {
-    let messages = document.getElementById('msg');
-    let alert = new bootstrap.Alert(messages);
-    alert.close();
+    try {
+        let messages = document.getElementById('msg');
+        let alert = new bootstrap.Alert(messages);
+        alert.close();
+    } catch (e) {}
+
 }, 2500);

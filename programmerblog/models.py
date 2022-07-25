@@ -7,7 +7,9 @@ from cloudinary.models import CloudinaryField
 
 # Post model to display post details when a post is created
 
+
 class Post(models.Model):
+
     ''' Model for Posts '''
     title = models.CharField(max_length=255, unique=True)
     title_tag = models.CharField(max_length=255)
@@ -20,20 +22,19 @@ class Post(models.Model):
     topic = models.CharField(max_length=255)
     summary = models.CharField(max_length=255, default='summary')
 
-
     class Meta:
         ''' To order created posts by descending order '''
         ordering = ['-publish_date']
 
     def __str__(self):
         return self.title + ' | ' + str(self.author)
-     
+
     def get_absolute_url(self):
         ''' Redirects to post-detail page on post creation '''
         return reverse("post-detail", kwargs={"slug": self.slug})
 
     def save(self, *args, **kwargs):
-        ''' A method to save url slug in database '''  
+        ''' A method to save url slug in database '''
         if not self.slug:
             self.slug = slugify(self.title)
         return super().save(*args, **kwargs)
