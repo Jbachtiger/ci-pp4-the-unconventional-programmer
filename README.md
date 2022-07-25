@@ -408,8 +408,6 @@ __W3C CSS Markup Validatior__ - https://jigsaw.w3.org/css-validator/validator
 
 ![CSS Validation](docs/testing/css-validated.png)
 
-
-
 ### JS Lint
 
 The JavaScript code was checked using [jshint.com](jshint.com) and returned no errors.
@@ -452,7 +450,18 @@ __Mobile Results__
 
 ## Solved Bugs
 
+1. Users were able to submit forms with no body content. It turns out this was a relatively easy fix where this needed to be added to the post model so it know that the body field was required. To do this I achanged the fields blank and null to False which solved the problem. [Link to commit](https://github.com/Jbachtiger/ci-pp4-the-unconventional-programmer/commit/a26120178c14e955435396c98f86dab9bd0cc090)
+
+2. Summernote WYSIWYG editor wasn't responsive. To solve this I added additional confi vars to change the width to 100%. [Link to commit](https://github.com/Jbachtiger/ci-pp4-the-unconventional-programmer/commit/95db6096c73a788f28ae40faccc2c9d655a568b7)
+
+3. New users who signed-up weren't having a profile created for them automatically so when clicking on the profile page on the navigation a RelatedObjectDoesNotExist error appeared. This was fixed by moving the code in the signals.py file  directly into the model for the profile. [Link to commit](https://github.com/Jbachtiger/ci-pp4-the-unconventional-programmer/commit/42078ec7ee921812d9719c126715170b27aab795)
+
+4. Integrity error with duplicated keys. This was solved by making changes to the post model, urls and home.html template so that slugs would be read properly. [Link to commit](https://github.com/Jbachtiger/ci-pp4-the-unconventional-programmer/commit/0f713ee23ee5ab5d5cfb0e85cc438b9b20a0e6aa)
+
+
 ## Known Bugs
+
+There are no known bugs left in this project. If you find any please get in touch with me. 
 
 ## Technologies Used
 
