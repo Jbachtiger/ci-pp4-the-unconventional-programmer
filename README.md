@@ -366,8 +366,6 @@ __Models.py File Example__
 
 ![Models.py error free](docs/testing/pep8-online.png)
 
-
-
 ### Colour Contrast Checks
 
 Colour contrast checks have been made on the site using the Colour Contrast Accessibility Validator by a11y.  All pages passed the colour contrast analysis except for the cta button element on each page. The pink button with the white text didn't allow for a great enough contrast. Therefore, I decided to change the button colour to a less bright pink (#ED91B3) and the text colour to black. This increased the contrast and ensured maximum accessibility making the contrast ratio within acceptable range. 
@@ -378,15 +376,21 @@ The results are show below:
 
 ![Colour Contrast Check Button Pass](docs/testing/colour-contrast-pass.png)
 
-
 ### Lighthouse Tool
 
+Lighthouse was used to test the Performance, Best Practices, Accessibility and SEO for desktop and mobile. The results are all within acceptable ranges.
 
+__Desktop Results__
+
+![Lighthouse Desktop](docs/testing/lighthouse.png)
+
+__Mobile Results__
+
+![Lighthouse Mobile](docs/testing/lighthouse-mobile.png)
 
 ## Solved Bugs
 
 ## Known Bugs
-
 
 ## Technologies Used
 
