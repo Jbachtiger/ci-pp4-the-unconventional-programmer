@@ -376,6 +376,12 @@ The website was viewed on a variety of devices of all sizes including:
 
 
 
+__W3C CSS Markup Validatior__ - https://jigsaw.w3.org/css-validator/validator
+
+![CSS Validation](docs/testing/css-validated.png)
+
+
+
 ### JS Lint
 
 The JavaScript code was checked using [jshint.com](jshint.com) and returned no errors.

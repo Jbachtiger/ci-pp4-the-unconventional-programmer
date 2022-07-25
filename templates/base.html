@@ -40,10 +40,10 @@
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link {% if url_name == 'create-post' %}active {% endif %}" aria-current="create post page" href="{% url 'create-post' %}">Create a Post</a>
+                        <a class="nav-link {% if url_name == 'create-post' %}active {% endif %}" aria-current="page" href="{% url 'create-post' %}">Create a Post</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if url_name == 'account_logout' %}active {% endif %}" aria-current="logout page" href="{% url 'account_logout' %}">Logout</a>
+                        <a class="nav-link {% if url_name == 'account_logout' %}active {% endif %}" aria-current="page" href="{% url 'account_logout' %}">Logout</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {% if url_name == 'profile' %}active {% endif %}" aria-current="page" href="{% url 'profile' %}">Profile</a>
@@ -51,11 +51,11 @@
 
                     {% else %}
                     <li class="nav-item">
-                        <a class="nav-link {% if url_name == 'account_login' %}active {% endif %}" aria-current="login page" href="{% url 'account_login' %}">Login</a>
+                        <a class="nav-link {% if url_name == 'account_login' %}active {% endif %}" aria-current="page" href="{% url 'account_login' %}">Login</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link {% if url_name == 'account_signup' %}active {% endif %}" aria-current="signup page" href="{% url 'account_signup' %}">Sign Up</a>
+                        <a class="nav-link {% if url_name == 'account_signup' %}active {% endif %}" aria-current="page" href="{% url 'account_signup' %}">Sign Up</a>
                     </li>
 
                     {% endif %}
