@@ -342,7 +342,25 @@ There is much functionality that can be added to this project in the future incl
 
 ## Testing
 
+Throughout development errors and warnings were fixed as I went on such as indentation problems, syntax errors, missing code errors. I also went through all my code files once the main functionality and style of the website was completed by using validators and following best practice to elimate problems with lines too long, trailing white spaces, stray divs etc.
+
+Google Chrome developer tools were used to inspect pages and look through code to help debug errors caused by HTML, CSS or JavaScript code.
+
+Manual and automated testing has been carried out, as well as proof reading of the ReadMe file using Grammarly.
+
 ### Manual Testing
+
+I have manually tested all the features of the website making sure to go through them with different browsers and devices sizes. I have also checked the sites features against the orignal user stories to ensure they have all been actioned. 
+
+
+
+__User Stories__
+
+
+__Features__
+
+
+
 
 ### Automated Testing
 
