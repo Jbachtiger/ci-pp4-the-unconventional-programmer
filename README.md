@@ -352,15 +352,13 @@ Manual and automated testing has been carried out, as well as proof reading of t
 
 I have manually tested all the features of the website making sure to go through them with different browsers and devices sizes. I have also checked the sites features against the orignal user stories to ensure they have all been actioned. 
 
-
-
 __User Stories__
 
+![Manual User Stories Testing](docs/testing/manual-testing-user-stories.png)
 
 __Features__
 
-
-
+![Manual Features Testing](docs/testing/manual-testing-features.png)
 
 ### Automated Testing
 
