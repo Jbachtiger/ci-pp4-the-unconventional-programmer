@@ -362,6 +362,23 @@ __Features__
 
 ### Automated Testing
 
+I have performed some basic automated tests on the forms, views and models as shown below.
+
+![Models](docs/testing/automated-model-tests.png)
+
+![Views](docs/testing/automated-views-tests.png)
+
+![Forms](docs/testing/automated-forms-tests.png)
+
+![Profile - Forms](docs/testing/profile-automated-forms-tests.png)
+
+
+- All the above tests passed as shown below
+
+![Tests Passed](docs/testing/tests-passed.png)
+
+- I have also installed Coverage with pip3 install converage and ran the program in the terminal using the coverage run manage.py test command. A file was generated with coverage html and the results can be found in the htmlcov folder in the index.html file.
+
 ### Browser and Device Testing
 
 __Browsers__
