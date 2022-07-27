@@ -14,3 +14,4 @@ class TestViews(TestCase):
         response = self.client.get("/create-post/")
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, "create_post.html")
+

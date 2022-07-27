@@ -342,7 +342,7 @@ There is much functionality that can be added to this project in the future incl
 
 ## Testing
 
-Throughout development errors and warnings were fixed as I went on such as indentation problems, syntax errors, missing code errors. I also went through all my code files once the main functionality and style of the website was completed by using validators and following best practice to elimate problems with lines too long, trailing white spaces, stray divs etc.
+Throughout development, errors and warnings were fixed as I went on such as indentation problems, syntax errors, missing code errors. I also went through all my code files once the main functionality and style of the website was completed by using validators and following best practice to elimate problems with lines too long, trailing white spaces, stray divs etc.
 
 Google Chrome developer tools were used to inspect pages and look through code to help debug errors caused by HTML, CSS or JavaScript code.
 
