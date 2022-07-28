@@ -5,8 +5,6 @@ from django.urls import reverse
 from django.template.defaultfilters import slugify
 from cloudinary.models import CloudinaryField
 
-# Post model to display post details when a post is created
-
 
 class Post(models.Model):
 

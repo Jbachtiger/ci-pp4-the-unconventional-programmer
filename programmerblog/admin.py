@@ -5,8 +5,6 @@ from .models import Post, Comment
 
 
 # Admin page functionality for posts
-
-
 @admin.register(Post)
 class PostAdmin(SummernoteModelAdmin):
     ''' Class for admin site post '''
