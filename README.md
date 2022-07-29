@@ -3,7 +3,7 @@
 ## Introduction
 The Unconventional Programmer is a blog/Reddit style website targeted at aspiring and junior developers. This site aims to share useful resources that will help people who have taken unconventional routes into programming and are at the start of their careers. It is a site that allows users to share their personal experiences via either creating a blog post themselves or commenting on existing ones.
 
-The website was built in Django using Python, JavaScript, CSS and HTML. Users are can create, edit, read and delete posts. On login, a profile is automatically created for them which users can click into and edit/update. They can to upload images for their blogs as well as a profile picture. Users can also comment on and like/unlike posts.
+The website was built in Django using Python, JavaScript, CSS and HTML. Users are can create, edit, read and delete posts. On login, a profile is automatically created for them which users can click into and edit/update. They can upload images for their blogs as well as a profile picture. Users can also comment on and like/unlike posts.
 
 The site provides role-based permissions for users to interact with the central dataset. Included is user authentication and Full CRUD functionality for blog posts. 
 
@@ -27,7 +27,6 @@ The site provides role-based permissions for users to interact with the central 
     - [Homepage](#homepage)
     - [Navbar](#navbar)
     - [Footer](#footer)
-    - [Blog Posts List](#blog-posts-list)
     - [Pagination](#pagination)
     - [Blog Post](#blog-post)
     - [Comments](#comments)
@@ -67,7 +66,7 @@ The site provides role-based permissions for users to interact with the central 
 
 ## User Experience
 ### Site Goals
-- To provide users with a place to find helpful resources about early careers in programming
+- To provide users who are just starting out their careers in programming to find helpful resources
 - To provide users with a place to share their knowledge and experiences
 - To provide users with a place where they can feel part of a community of like-minded individuals
 - To show users that they are not on their own and there are many people in the same shoes as them and feeling like them
@@ -140,7 +139,7 @@ For ease of reading, I have also listed all the completed user stories below:
 
 ## Design
 ### Wireframes
-Before coding commenced, a set of wireframes were created to help me visualise roughly what my website would look like on desktop, tablet and mobile. It provided a starting point for me in terms of design. The finalised project went through many iterations and has changed from the initial wireframes however, inspiration was taken from these wireframes. 
+Before coding commenced, a set of wireframes were created to help me visualise roughly what the website would look like on desktop, tablet and mobile. It provided a starting point in terms of design. The finalised project went through many iterations and has changed from the initial wireframes however, inspiration was taken from these wireframes. 
 
 - Homepage
 ![Homepage](docs/wireframes/homepage.png)
@@ -165,7 +164,7 @@ Before coding commenced, a set of wireframes were created to help me visualise r
 
 ![Colour Palette](docs/colour-palette/colour-pallette.png)
 
-As well as #8C6D89(light purple), #fff (white).
+Other colours used also were #8C6D89(light purple), #fff (white) and #ED91B3 (light pink). The colour #ED91B3 replaced #ED5393 as the colour for the CTA buttons. This change was made for accessibility reasons and to ensure the colour contrast was within the correct ratio for readability. 
 
 ### Fonts
 The font used in this project was Roboto with a backup of sans-serif. It was chosen for its easy readability for users. Fonts were imported using Google Fonts.
@@ -184,19 +183,17 @@ As mentioned above, a kanban board was created using GitHub Projects [here](http
 ![Kanban Fourth Stage](docs/kanban/kanban-board-3.png)
 
 ## Database Schema
-Smart Draw was used to create a database schema to visualise the types of custom models this project might require. This schema was used as a guide to what needed to be added to each model. In the end only the Blog Post, Comment and Profile models were used. AllAuth was also used for the authentication system. This uses the built-in Django User Model.
+Smart Draw was used to create a database schema to visualise the types of custom models this project might require. This schema was used as a guide to what needed to be added to each model. In the end only the Blog Post, Comment and Profile models were used due to time constraint. AllAuth was also used for the authentication system. This uses the built-in Django User Model.
 
 ![Database Schema](docs/database-schema/database-schema.png)
 
 ## Features
 ### Homepage
-
-A simplistic homepage which clearly shows the purpose of the site. The user can look through various blog posts until they find one that interests them. The purpose of this section is to introduce the site, and have minimal distractions so the user's attention is immediately drawn to the blog posts.
+A simplistic homepage with minimal distractions ensuring the users main focus is on looking through the blog post lists. The blog posts on the homepage are displayed in a single list view and provide a summary of what the blog contains. This provides the user with some quick information to see if they would like to find out more information about it including who submitted it when it was published, the topic of the post, a summary and how many likes it has received. These fields have all been included to provide the user with a better experience and be able to make an informed decision as to whether they would like to continue into the blog post to read it. Users do not need to be registered to view a post. 
 
 ![Homepage](docs/features/hompage-website.png)
 
 ### Navbar
-
 The navigation bar is featured on all pages, is responsive and has active links functionality so the user knows which link they are on by hovering on it in the navbar. It is identical on all pages and is easy to use providing a good user experience. For mobile view, the navbar reduces to a burger menu. The purpose of this feature is to allow users to navigate all pages easily across all devices without having to use a back button to get to the next page. There is also authentication in place which will change what displays on the navbar depending on whether a user is logged in or not.
 
 - Logged out Navbar
@@ -209,31 +206,21 @@ The navigation bar is featured on all pages, is responsive and has active links 
 ![Navbar](docs/features/navbar.png)
 
 ### Footer
-
 The footer section includes links to relevant social links which all open up in a new tab to allow easy navigation for the user. They also have a hover effect added to them to make them stand out more and obvious to click. The copyright section is in place for legal reasons and the date is automatically updated using JavaScript. The footer is a good way to encourage users to connect via social media.
 
 ![Footer](docs/features/footer.png)
 
-### Blog Posts List
-
-The blog posts on the homepage are displayed in a single list view and provide a summary of what the blog contains. This provides the user with some quick information to see if they would like to find out more information about it including who submitted it when it was published, the topic of the post, a summary and how many likes it has received. These fields have all been included to provide the user with a better experience and be able to make an informed decision as to whether they would like to continue into the blog post to read it.
-
-![Blog Post - List View](docs/features/blog-post-list-view.png)
-
 ### Pagination
-
 The blog posts have had pagination functionality added to them so that 3 posts are displayed on each page. This has been implemented to improve the user experience and not overwhelm the user with information and blog posts. 
 
 ![Pagination](docs/features/pagination.png)
 
 ### Blog Post
-
-Each post has a title followed by a submitted by field. There are also Edit and Delete buttons which have been put at the top of the page to ensure the user doesn't miss them. The main content is then added using the WYSIWYG CKeditor which provides basic styling and image uploads. At the bottom of the blog post, there is a section for users to leave comments and talk to each other as well as a like/unlike option. The purpose of the blog layout is to make it as easy as possible for a user to read the content, digest it and then contribute to it in the form of comments and likes. 
+Each post has a title followed by a submitted by field. There are also Edit and Delete buttons for signed in users, which have been put at the top of the page to ensure the user doesn't miss them. The main content is then added using the WYSIWYG editor Summernote which provides basic styling and image uploads. At the bottom of the blog post, there is a section for users to leave comments and talk to each other as well as a like/unlike option. The purpose of the blog layout is to make it as easy as possible for a user to read the content, digest it and then contribute to it in the form of comments and likes. 
 
 ![Read Post](docs/features/read-post.png)
 
 ### Comments
-
 Each blog post has a comment section where users can post their comments for that specific blog. The user can see the number of comments that have been made on the post, the name of the user who wrote each comment and when that comment was published. Users can only make a comment when signed in and will be prompted to sign-in or sign-up in order to leave comments. This is a great way for users to interact with each other and the publisher, discuss the topic and ask/answer questions.
 
 - Not signed into an account
@@ -245,7 +232,6 @@ Each blog post has a comment section where users can post their comments for tha
 ![Comments](docs/features/comment-1.png)
 
 ### Likes
-
 The user can also like and unlike blog posts. The purpose of this is to provide useful feedback to the community on how popular/good a post is by rewarding that post with likes. If a user changes their mind they can remove their like from a post. Each like is counted on the blog page as well as on the homepage where the blog list sits. If a post is unliked by a user this is reflected in the count.
 
 - Like
@@ -257,7 +243,6 @@ The user can also like and unlike blog posts. The purpose of this is to provide 
 ![Unlike](docs/features/unlike.png)
 
 ### Login / Logout / Sign-up
-
 Django Allauth was installed and used to create the register, sign-in and sign-out functionality meaning the project would have the authentication foundations in place to expand functionality in future. These pages are needed to provide authenication and to allow users access to content that is restricted to those who have created a login. 
 
 - Login
@@ -273,31 +258,26 @@ Django Allauth was installed and used to create the register, sign-in and sign-o
 ![Register](docs/features/register.png)
 
 ### Create a Post
-
 If the user is logged in they can create a post. Current fields being captured include title, title tag, summary (which is used to display on the homepage), body (using the summernote editor) and topic. 
 
 ![Create a Post](docs/features/create-a-post.png)
 
 ### Edit a Post
-
 If the user is logged in they can edit a post they have created but not anyone else. Same fields are included as with create a post.
 
 ![Edit a Post](docs/features/edit-a-post.png)
 
 ### Delete a Post
-
 Once a user has created a post they can delete their post. They can do this by accessing the blog that they have created and wish to delete and clicking the delete button at the top of the page. They will then be taken to a page asking them if they are sure they wish to delete their blog and to click confirm or go back to their blog page. 
 
 ![Delete a Post](docs/features/delete-a-post.png)
 
 ### Profile
-
 Once a user registers, they will have a profile page automatically created for them. The link to their profile page will appear in the navigation bar once logged in. If they navigate to this page, they will be able to update their username, email address, add a bio and upload an image. The purpose of this page is to provide users with more control over their account and start to be able to customise their data. 
 
 ![Profile](docs/features/profile-signed-in.png)
 
 ### Messages
-
 To provide users with more feedback after they take certain actions, a messaging system has been added to let users know their desired actions have occurred. For example:
 
 -  Login
@@ -312,18 +292,16 @@ To provide users with more feedback after they take certain actions, a messaging
 
 ![Profile Updated](docs/features/profile-message.png)
 
-These messages last for 2 seconds before automatically being timed out. Alternatively, the user can click a little x to remove them.
+These messages last for 2 seconds before automatically being timed out. Alternatively, the user can click a little 'X' to remove them.
 
 ### Admin Page
+A superuser was created for this project to manage the backend admin section. Users with admin access have more functionality than normal users such as the ability to create, read, update and delete information like users, posts, profiles and comments.
 
-A superuser was created for this project to manage the backend admin section. Users with admin access have more functionality than normal users such as create, read, update and delete information such as users, posts, profiles and comments.
-
-Access is restricted to approved admins only and can be accessed by adding /admin to the URL on the homepage and signing in if not already signed in through the front end of the site.
+Access is restricted to approved admins only and can be accessed by adding '/admin' to the URL on the homepage and signing in if not already signed in through the front end of the site.
 
 ![Admin](docs/features/admin-page.png)
 
 ## Future Development
-
 There is much functionality that can be added to this project in the future including:
 
 - Blog search - a search box could be included on the homepage to allow users to search the site for posts by topic, author etc
@@ -341,7 +319,6 @@ There is much functionality that can be added to this project in the future incl
 - The ability for users to login via social networks such as Google or Facebook 
 
 ## Testing
-
 Throughout development, errors and warnings were fixed as I went on such as indentation problems, syntax errors and missing code errors. I also went through all my code files once the main functionality and style of the website was completed by using validators and following best practice to eliminate problems with lines too long, trailing white spaces, stray divs etc.
 
 Google Chrome developer tools were used to inspect pages and look through code to help debug errors caused by HTML, CSS or JavaScript code.
@@ -349,7 +326,6 @@ Google Chrome developer tools were used to inspect pages and look through code t
 Manual and automated testing has been carried out, as well as proofreading of the ReadMe file using Grammarly.
 
 ### Manual Testing
-
 I have manually tested all the features of the website making sure to go through them with different browsers and device sizes. I have also checked the features of the site against the original user stories to ensure they have all been actioned. 
 
 __User Stories__
@@ -361,7 +337,6 @@ __Features__
 ![Manual Features Testing](docs/testing/manual-testing-features.png)
 
 ### Automated Testing
-
 I have performed some basic automated tests on the forms, views and models as shown below.
 
 ![Models](docs/testing/automated-model-tests.png)
@@ -406,7 +381,6 @@ The website was viewed on a variety of devices of all sizes including:
 
 
 ### W3C Validatior
-
 The official W3C Markup Validator was used to validate both the HTML and CSS of the project to ensure there were no syntax errors within the site. 
 
 __W3C HTML Markup Validator__
@@ -442,11 +416,9 @@ __W3C CSS Markup Validatior__ - https://jigsaw.w3.org/css-validator/validator
 ![CSS Validation](docs/testing/css-validated.png)
 
 ### JS Lint
-
 The JavaScript code was checked using [jshint.com](jshint.com) and returned no errors.
 
 ### PEP8 Linter Results
-
 All python files that I created were run through the PEP8 linter to validate such as models.py, views.py, forms.py etc and any errors picked up were fixed. There are no errors left in these files.
 
 __Models.py File Example__
@@ -460,7 +432,6 @@ __Models.py File Example__
 ![Models.py error free](docs/testing/pep8-online.png)
 
 ### Colour Contrast Checks
-
 Colour contrast checks have been made on the site using the Colour Contrast Accessibility Validator by a11y.  All pages passed the colour contrast analysis except for the CTA button element on each page. The pink button with the white text didn't allow for a great enough contrast. Therefore, I decided to change the button colour to a less bright pink (#ED91B3) and the text colour to black. This increased the contrast and ensured maximum accessibility making the contrast ratio within an acceptable range. 
 
 The results are shown below:
@@ -470,7 +441,6 @@ The results are shown below:
 ![Colour Contrast Check Button Pass](docs/testing/colour-contrast-pass.png)
 
 ### Lighthouse Tool
-
 Lighthouse was used to test the Performance, Best Practices, Accessibility and SEO for desktop and mobile. The results are all within acceptable ranges.
 
 __Desktop Results__
@@ -482,8 +452,7 @@ __Mobile Results__
 ![Lighthouse Mobile](docs/testing/lighthouse-mobile.png)
 
 ## Solved Bugs
-
-1. Users were able to submit forms with no body content. It turns out this was a relatively easy fix where this needed to be added to the post model so it know that the body field was required. To do this I changed the fields blank and null to False which solved the problem. [Link to commit](https://github.com/Jbachtiger/ci-pp4-the-unconventional-programmer/commit/a26120178c14e955435396c98f86dab9bd0cc090)
+1. Users were able to submit forms with no body content. The validation needed to be added to the post model within the body field to let it know it was required. To do this I changed the fields blank and null to False which solved the problem. [Link to commit](https://github.com/Jbachtiger/ci-pp4-the-unconventional-programmer/commit/a26120178c14e955435396c98f86dab9bd0cc090)
 
 2. Summernote WYSIWYG editor wasn't responsive. To solve this I added additional config vars to change the width to 100%. [Link to commit](https://github.com/Jbachtiger/ci-pp4-the-unconventional-programmer/commit/95db6096c73a788f28ae40faccc2c9d655a568b7)
 
@@ -491,13 +460,10 @@ __Mobile Results__
 
 4. Integrity error with duplicated keys. This was solved by making changes to the post model, urls and home.html template so that slugs would be read properly. [Link to commit](https://github.com/Jbachtiger/ci-pp4-the-unconventional-programmer/commit/0f713ee23ee5ab5d5cfb0e85cc438b9b20a0e6aa)
 
-
 ## Known Bugs
-
 There are no known bugs left in this project. If you find any please get in touch with me. 
 
 ## Technologies Used
-
 ### Languages Used
  - [Python](https://www.python.org/)
  - [HTML](https://developer.mozilla.org/en-US/docs/Glossary/HTML5)
@@ -526,15 +492,11 @@ There are no known bugs left in this project. If you find any please get in touc
  - [Favicon.io](https://favicon.io/favicon-generator/) - generated the websites favicon
 
 ### Databases
-
 - SQLite: local database used to test during development
 - PostgreSQL: database used in Heroku to store data on deployment
 
-
 ## Deployment
-
 ### Deploying to Heroku
-
 This application has been deployed using Heroku by following these steps:
 
 1. Commit all changes and push them to GitHub
@@ -575,7 +537,6 @@ This application has been deployed using Heroku by following these steps:
 36. Heroku will now build the app for you. Once it has completed the build process you will see a 'Your App Was Successfully Deployed' message and a link to the app to visit the live site.
 
 ### Forking Repository
-
 You can fork the GitHub repository to make a copy of the original to view and change without affecting the original. This can be done by:
 
 1. Log into GitHub or create an account
@@ -584,7 +545,6 @@ You can fork the GitHub repository to make a copy of the original to view and ch
 4.  Click the fork button and a copy of the repository will have been created
 
 ### Cloning Repository
-
 You can create a clone of your repository by:
 
 1. Locate the repository you wish to clone https://github.com/Jbachtiger/ci-pp4-the-unconventional-programmer
@@ -595,13 +555,11 @@ You can create a clone of your repository by:
 6. Press enter and git will clone the repository to your local machine
 
 ## Credits
-
 ### Code
 1. [Dev](https://dev.to/earthcomfy/django-user-profile-3hik) - this website was used as a guide to creating a profile page - code was amended to my projects specific needs
 2. I Think Therefore I Blog - code used for likes authentication and amended to suit my project
 
 ### Content 
-
 The content for the blog post was taken purely for illustrative purposes and not written by me. Below are the details of who wrote each post and where it was taken from:
 
 1. Code Academy - [Coding Projects for Beginners](https://www.codecademy.com/resources/blog/coding-projects-for-beginners/)
@@ -613,11 +571,9 @@ The content for the blog post was taken purely for illustrative purposes and not
 7. The Muse - [5 different types of imposter syndrome and 5 ways to battle each one](https://www.themuse.com/advice/5-different-types-of-imposter-syndrome-and-5-ways-to-battle-each-one)
 
 ### Media
-
 All images used in the blog posts were taken directly from the post's sources as detailed above in the content section.
 
 ### Resources
-
 1. [Stack Overflow](https://stackoverflow.com/questions/46617375/how-do-i-show-an-active-link-in-a-django-navigation-bar-dropdown-list) - post helped my understanding of how to show active links in the Django navigation bar
 2. [PyPi](https://pypi.org/project/django-active-link/) - provided further reading on how to use django active links
 3. [Django CKeditor](https://django-ckeditor.readthedocs.io/en/latest/#field) - provided documentation of how the ckeditor works
